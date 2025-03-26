@@ -1,0 +1,1318 @@
+# Microbit Robot Car Tutorial
+
+## Project 13：RGB Module
+
+1. Description
+
+The RGB color mode is a color standard in the industry. It obtain arious colors by changing the three color channels of red (R), gree G), and blue (B) and integrating them. RGB denotes the three colors o ed, green and blue.
+
+The monitors mostly adopt the RGB color standard, and all the colors o he computer screen are composed of the three colors of red, green an lue mixed in different proportions. A group of red, green and blue i he smallest display unit. Any color on the screen can be recorded an xpressed by a set of RGB values.
+
+![](media/afc068defa4e1ef3a0b0c350aba05f26.png)
+
+RGB color mixing is like having red, green and blue lamps. When thei ight is superimposed on each other, the colors are mixed, while th rightness is equal to the sum of the brightness of the three lamps. Th ore mixed, the higher the brightness, therefore, it is often calle even-color LED.
+
+<table>
+<colgroup>
+<col style="width: 22%" />
+<col style="width: 25%" />
+<col style="width: 22%" />
+<col style="width: 29%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>Color</td>
+<td>RGB value（R,G,B）</td>
+<td>Color</td>
+<td>RGB value（R,G,B）</td>
+</tr>
+<tr class="even">
+<td>Black</td>
+<td>255,255,255</td>
+<td>Red</td>
+<td>0,255,255</td>
+</tr>
+<tr class="odd">
+<td>Green</td>
+<td>255,0,255</td>
+<td>Blue</td>
+<td>255,255,0</td>
+</tr>
+<tr class="even">
+<td>Cyan</td>
+<td>255,0,0</td>
+<td>Dark red</td>
+<td>0,255,0</td>
+</tr>
+<tr class="odd">
+<td>Yellow</td>
+<td>0,0,255</td>
+<td>White</td>
+<td>0,0,0</td>
+</tr>
+<tr class="even">
+<td>......</td>
+<td>.......</td>
+<td>......</td>
+<td>......</td>
+</tr>
+</tbody>
+</table>
+
+Since our LED lights are [common anode](javascript:;), 255 is the lowes alue and 0 is the brightest value.
+
+In this project, we are going to make two experiments. One is to mak wo RGB lights light up seven colors of red, green, blue, cyan, purple ellow and white, the other is to make two RGB lights gradually displa ifferent colors.
+
+2. Preparation
+
+（1）Insert the micro: bit correctly into the expansion board
+
+（2）Connect the battery holder to the expansion board
+
+（3）Turn on the power switch（Slide the POWER switch to ON end）
+
+（4）Connect the micro：bit and computer via a micro USB cable
+
+（5）Open the Web version of Makecode
+
+If you choose to load the project by importing the Hex file, you do
+not need to manually add the Mini car extension library.
+
+If you want to drag the code manually, add the Mini car extension
+library first(you can refer to the "1. Development environment
+configuration "file).
+
+3. Schematic Diagram
+
+![](media/85f1916d4a6a4777fe3ced20137a2b08.png)
+
+![](media/dd4476449cac69cd49ab641646d12eb3.png)
+
+Working Principle: Microbit, as the host, sends instructions to th lave STC8G1K08 through the IIC, then the slave outputs PWM to contro GB LED lights. This greatly saves the IO ports of the microbit board or the IIC enables to control two motors and two RGB LED lights.
+
+4. Code Explanation
+
+If you don't add the library file, then the MiniCar bar will not appear.
+
+![](media/108fc4b69cfa85a10620ac1b5743c85a.jpg)
+
+![](media/4d0bbd5f616b57d1994062e7ec33d522.png)Thi s used for color setting, the first option is left and right RG ights, the second option is color, which has "red, green, blue, cyan urple, yellow, white and led off.
+
+![](media/f67c39e81f9525ee226f2870a298fd45.jpg)
+
+![](media/09d6a1904631545eea4b0d875e7cbd6c.jpg)
+
+![](media/51c7e299ef929ba684ed13e97b141c7f.png)Thi s used to set the left RGB LED, you need to select the color, the nput a value from 0 to 255 at PWM. Since our LED lights are [commo node](javascript:;),the lower the pwm value, the brighter the light nd the higher the value, the darker the light.
+
+![](media/6d3334f56cfbd88937c7154b7c49da98.png)
+
+![](media/9ef147f7bf6486f71cf0b3e29f6fe0bd.png)Thi s used to set the right RGB LED
+
+![](media/cd1f6b49019ba04693821af298256fc3.png)Thi s the breathing light display we have written in the library
+
+![](media/64c66da466ad00806745209d9d5f1790.png)Thi an be used to turn off all RGB LED lights. You can assign a value o 55 to the PWM of this lamp if you only want to turn a single light off.
+
+5. Test Code
+
+You can upload the code 1 directly from the tutorial (read th Development Environment Configuration" file if in doubt).
+
+Or add the code blocks manually:
+
+Enter“MiniCar”→“LED OFF”(turn off the front LED so as not to affect th urrent LED program)
+
+![](media/964a745ad40caf57222e60ced6f9061c.png)
+
+Drag out the “set RGB color module”block in the “MiniCar”bar and set i s "LED_R" and "LED_L" respectively, and set the color to "red".
+
+![](media/1778f5b27721cf4548678a7c54047fee.jpg)
+
+Find the delay code block in the "Basic" bar and add it, then set th elay time to 1s.
+
+![](media/443df36d4b979bedd504d5ab5b5f09b6.png)
+
+Add other colors in the same way
+
+Complete Program：
+
+![](media/537b03312998d3808713b6f5d83d7e6c.jpg)
+
+After uploading the code, the RGB LED will switch every second in th rder of red, green and blue.
+
+6. Breathing Lights
+
+The code is as follows:
+
+![](media/2c0965ad43a5d152e65284ec57f075f2.png)
+
+After uploading the code, the RGB LED will be red, and then green, the  mixture of red and green will appear. When the red light is off, th lue light will be on, then a mixture of blue and green will b isplayed.
+
+However, when the green light is off, the red light will be on, then  ixture of blue and red will be shown. In closing the red and blu ights will be off.
+
+7. Expanded Knowledge
+
+1s = 1000ms ； 1ms = 1000us ；1us = 1000nm
+
+Then the 1000 ms we used in the project is 1 s
+
+![](media/512726c47216d19d29ea1643dad4fa46.png)
+
+Maybe you are capable of configuring the light color you want b ourself. You solely need to configure the red, green and blue PWM fo he RGB.
+
+
+
+
+
+## Project 14: Motor Driving
+
+1. Description
+
+The robot car is equipped with two DC geared motors, which are develope n the ordinary DC motors. It enjoys a matching gear reduction box hich provides a lower speed but a larger torque. Furthermore, differen eduction ratios of the box can provide different speeds and torques.
+
+The reduction motor is the integration of gearmotor and motor, which i pplied widely in steel and machine industry.
+
+Moreover, the car boasts a STC8G1K08 and a HR8833MTE chip. To save th O ports, we send instructions to the STC8G1K08 chip through the IIC o he micro:bit, then the STC8G1K08 chip controls the HR8833MTE chi ccording to the corresponding instructions to control the rotatio irection and speed of the two DC reduction motors (the control proces s as follows).
+
+![](media/bbf95193fbacad7cb587d5b0a3767654.png)
+
+2. Preparation
+
+（1）Insert the micro: bit correctly into the expansion board
+
+（2）Connect the battery holder to the expansion board
+
+（3）Turn on the power switch（Slide the POWER switch to ON end）
+
+（4）Connect the micro：bit and computer via a micro USB cable
+
+（5）Open the Web version of Makecode
+
+If you choose to load the project by importing the Hex file, you do
+not need to manually add the Mini car extension library.
+
+If you want to drag the code manually, add the Mini car extension
+library first(you can refer to the "1. Development environment
+configuration "file).
+
+3. Circuit Diagram
+
+![](media/78b5a35bedaf4ce0b8ad3f850765e4f5.png)
+
+![](media/14397c83373c6ff919baccef6e0a83ec.png)
+
+4. Code Explanation
+
+Drag the motor control module from the MiniCar bar to the programmin rea. If you don't add the library file, then the MiniCar bar will no ppear.
+
+![](media/f378094ab6779f295ef4f2ca6d000c88.png)
+
+Code block for motor control:
+
+![](media/8bfada8422f29ef85022993420902fa8.png)
+
+①：It is used to select AB motors
+
+![](media/0ca197c01d7547f8c2ddb65a02d037f3.png)
+
+②：It is used to select the direction of the motor
+
+![](media/3e44e4eea4e3a71b23c22f7502e8a1af.png)
+
+③：It is used to set the motor speed（range:0~255）. You can manuall nter the speed value or click the mouse under this area to set it.
+
+![](media/18ca6630c9bcb69870b86c493ba3fbce.png)
+
+5. Test Code
+
+You can upload the code directly from the tutorial (read th Development Environment Configuration" file if in doubt).
+
+Or add the code blocks manually:
+
+The function we want to achieve is to control the car at a speed of 10 o go forward for 1s, go back for 1s, turn left for 1s, turn right fo s and stop for 1s. (combine the "4. Code blocks for motor control utorial)
+
+Step 1：Set the code function to the car forward for 1s
+
+Set“A”“B”motor to“Forward”, and the speed to“100”，then drag out th elay module in the basic bar and set the time to 1s.
+
+![](media/ae6c1b7f2546e100fac48bb32d26348f.png)
+
+Step 2：Set the code function to the car backward for 1s
+
+Set“A”“B”motor to“Backward”, and the speed to“100”，then drag out th elay module in the basic bar and set the time to 1s.
+
+![](media/5b443215144a1cc9650af79ff8fd4b96.png)
+
+Step 3：Set the code function to make the car turn left for 1s
+
+Set motor“A”to“Backward”, and the speed to 100，“B”to“Forward”and th peed to 100，then drag out the delay module in the basic bar and se he time to 1s.
+
+![](media/01e9e5b4de306a0a7a97e8845c71977a.png)
+
+Step 4：Set the code function to make the car turn right for 1s
+
+Set motor“B”to“Backward”, and the speed to 100，“A”to“Forward”and th peed to 100，then drag out the delay module in the basic bar and se he time to 1s.
+
+![](media/769edfa0dc670de39f143af13f6d5d40.png)
+
+Step 5： Set the code function to make the car stop
+
+Set the speed of“A”“B”motor to“0”，and the delay time to 1s.
+
+![](media/226b4d66459ce45b0085b63e695dd631.png)
+
+**  
+**Complete Program：
+
+![](media/68811c20704283594f7a0e7950ff843a.png)
+
+6. Test Result
+
+Upload the code to the micro:bit board, then turn on the switch at th ack of the car, then the car will go forward for 1s, backward for 1s urn left for 1s, turn right for 1s and stop for 1s.
+
+7. Expanded Knowledge
+
+How to make the motor turn left?
+
+①Set the A motor to backward, the B motor to forward, which is a lef urn at the center of the distance between the two wheels.
+
+②Set the A motor to stop, the B motor to forward, which is a left tur t the center of the left motor.
+
+③Set the AB motors to forward, then set the speed of the motor on th eft to be smaller than that on the right. In this way, the car wil ove to the left when moving forward due to the speed difference, an he greater the speed difference, the greater the deviation.
+
+④Set the AB motors to backward, then set the speed of the motor on th eft to be greater than that on the right. In this way, the car wil ove to the left when moving backward due to the speed difference, an he greater the speed difference, the greater the deviation.
+
+The principle of making the car turn right is the same, you only need t witch the motor.
+
+
+
+
+
+## Project 15: Light Tracking Smart Car
+
+1. Description
+
+Do you find that the street lights outside will light up when it get ark and goes off at dawn? Next, we will learn the main component tha auses this circumstance, which is "photoresistor".
+
+Working Principle: It is a resistor made by the photoelectric effec f a semiconductor, which is very sensitive to ambient light, thus it esistance value will vary with different light intensity.
+
+We seek to use this feature to design a circuit and generate  hotoresistor module. The signal end of the module is connected to th nalog port of the microcontroller.
+
+When the light intensity increases, the resistance decreases, and th oltage of the analog port rises, that is, the analog value of th icrocontroller goes up. Otherwise, when the light intensity decreases he resistance increases, and the voltage of the analog port declines hat is, the analog value of the microcontroller becomes smaller herefore, we can use the photoresistor to read the corresponding analo alue and sense the light intensity in the environment.
+
+It is commonly applied to light measurement, control and conversion ight control circuit as well.
+
+In this project, we will use the left and right photoresistors t ontrol the car to find the light source.
+
+2. Preparation
+
+（1）Insert the micro: bit correctly into the expansion board
+
+（2）Connect the battery holder to the expansion board
+
+（3）Turn on the power switch（Slide the POWER switch to ON end）
+
+（4）Connect the micro：bit and computer via a micro USB cable
+
+（5）Open the Web version of Makecode
+
+If you choose to load the project by importing the Hex file, you do
+not need to manually add the Mini car extension library.
+
+If you want to drag the code manually, add the Mini car extension
+library first(you can refer to the "1. Development environment
+configuration "file).
+
+3. Circuit Diagram of Photoresistor
+
+![](media/d9b391d95bdb353297c7d65b3319db50.png)
+
+4. Code Explanation
+
+Find "LDR_R" and "LDR_L" under "Photosensitive sensor" in the “Min ar”.
+
+![](media/abd8912fa4d11aa04f4608654cc3eec7.png)
+
+①“LDR_R”code block：It can obtain the value of the right photoresistor.
+
+![](media/f3fd64a540aa9c96581b5059610938c1.png)
+
+②“LDR_L”code block：It can obtain the value of the left photoresistor.
+
+![](media/b654d6fc3e3ee06f122f01a529c6c05a.png)
+
+5. Read the Photoresistor
+
+You can upload the code “1-ReadLight.hex”directly from the tutoria read the "Development Environment Configuration" file if in doubt).
+
+Or add the code blocks manually:
+
+Step 1：First, set up a code framework for serial port printing, the ind the "serial redirect to USB" code block in the "Serial" bar, an rag it into the "on start" block.
+
+![](media/392bc5205f6bb62c7bf78720e989b8cd.png)
+
+Step 2：Find the "serial write value" code block in the "Serial" bar nd put it into the“forever”module.
+
+![](media/28fc50d2993f0fed4682e14f01737d96.png)
+
+Enter“LDR_R:”in the “serial write value” block, and put it into th umeric area:
+
+![](media/c9035063b8f17a941735240da6fdc5a1.png)
+
+Add the left photoresistor in the same way, then place a delay of 1s.
+
+![](media/5abbddc736163c6207f7d727abd135a8.png)
+
+Complete Program：
+
+![](media/48d42fd8ed2eead8d19ed1b0ba82f0ac.png)
+
+View the value printed by the serial port if your computer is Window 0.
+
+![](media/2496f93e59b8725e222bad5ea5de1719.png)
+![](media/392669a3a91dff8806ecf62bd6aab282.png)
+
+If the operating system is less than Windows 10, the serial port tool i equired for printing. The software installation and tutorial ar ontained in the 3. Cool Term Software folder.
+
+6. Flow Chart
+
+![](media/b6322b372595be0a6834ae9df3195eb1.emf)
+
+7. Light Tracking Smart Car
+
+Directly upload "2-LightFollow.hex" in the "Programs" folder.
+
+Code“Detect the analog value of photoresistors”
+
+Create two new variables in "Variables" and call them "led_l" an led_r"
+
+![](media/b84fd0e6bee9810ddf146c689a58b22f.png)
+
+Put the two setting variable module under the "forever" and assign th alue of "LDR_L" to "ldr_l" and the "LDR_R" to "ldr_r" respectively.
+
+![](media/2e20c37346d565aeda59834b5b808ef7.png)
+
+Find the "if" module in the "Logic" bar and add it to "forever" .
+
+![](media/5cc7135c9320e7bb2fe2812a83b29463.png)
+![](media/8a36cba13ab678fef94f791995ef5caa.png)
+
+Code“The value on the left and the right are both greater than 650?”
+
+Enter "Logic"→ "Boolean"→ "and", then put it into "if" .
+
+![](media/635d1a1b9b44852b463ef48e262976dd.png)
+![](media/c0a1bbeefd380646a600cdd6f94ddb19.png)
+
+Tap “Logic”→ “Comparison”→ “=”, then put it into the boxes on eithe ide of "and". Set the “=” on the left to“ldr_r” \> 650, the right “=”
+to ldr_l” \> 650.
+
+"ldr_r" and "ldr_l" modules are in the "Varlables" bar. The "=" can b witched to "\>" by clicking the mouse. Input 650 to the left of "=" .
+
+![](media/615c8b9ffcc73eea03efec56dd1bbca6.png)
+
+Code ”The car goes forward ”
+
+If the value on the left and the right are both greater than 650, the he car goes forward. Add the “The car goes forward” code into "if" an et the speed to100.
+
+![](media/623b9e61edd53a04b4fce11d8fb16256.png)
+
+If the condition is not met, "else if" will be executed. Tap
+![](media/d490e61dfc049e2f9208dcb0f6e564b5.png)
+twice to add "else if" .
+
+![](media/60d966e315754944877211f154daf971.png)
+
+Code“The value on the left is greater than 650 and the right is les han or equal to 650?”
+
+Tap“ldr_r”statement→“=”，then change it to“≤”
+
+![](media/0799c3b29f2234f0c99d3b803a0cb89e.png)
+
+![](media/7e5a70db2381f3c864721b0ed8ca3408.png)
+
+Code ”The car turns left ”
+
+If the value on the left is greater than 650 and the right is less tha r equal to 650, then the car will turn left. Add the “The car turn eft” code into "else if" and set the speed to 100.
+
+![](media/bf7e9e05d3db146bdfd9071d205d7a75.png)
+
+If the condition is not met, "else if" will be executed. Tap
+![](media/d490e61dfc049e2f9208dcb0f6e564b5.png) t dd "else if" .
+
+![](media/7b7863151f9676101b1e7c4e501b3051.png)
+
+Code“The value on the left is less than or equal to 650 and the right i reater than 650?”
+
+Tap“ldr_l”statement→“=”，then change it to“≤”
+
+![](media/de5a919d711670c053c36dd9ee899463.png)
+
+![](media/3ae9a27e9aa8302c63a8e9e8d3983037.png)
+
+Code ”The car turns right ”
+
+If the value on the left is less than or equal to 650 and the right i reater than 650, then the car turns right.
+
+Add the “The car turns right” code into "else if" and set the speed t 00.
+
+![](media/033cfb3205171d50d10976aed7b9804d.png)
+
+If the conditions are not met, the car will stop. Add the
+“The car stops” code into "else”.
+
+![](media/2878f59d0981935632b7e7e4c82e584d.png)
+
+Complete Program：
+
+![](media/d1071911195acae904f1a1aa120809eb.png)
+
+8. Test Result
+
+After uploading the code, turn on the switch on the rear of the car hen you can use the flashlight to play with the car. It’s best used i  relatively dark environment. When the ambient light intensity is abov 50, the car will keep moving.
+
+9. Expanded Knowledge
+
+If you have questions about the code blocks, please tap it:
+
+https://makecode.microbit.org/reference/
+
+
+
+
+
+## Project 16: Line Tracking Smart Car
+
+1. Description
+
+The car comes with two line tracking sensors and two potentiometers.
+
+Besides, it adopts a TCRT5000 IR tube, which contains an IR emittin ube and an IR receiving tube. When the infrared signals of the emittin ube is received by the receiving tube through reflection, th esistance of the receiving tube will change, which is generall eflected in the voltage change on the circuit.  
+
+The resistance varies depending on the intensity of the infrared signal eceived by the receiving tube, which is often in the color of th eflecting surface and its distance of the receiving tube. At the tim f detection, black is high level active and white is low level active. 
+
+Working Principle: When the car runs above a white road, the I mitting tube installed under the car emits infrared signals to detec he road and the receiving tube will receive signals sending back. The he output end outputs low level(0). When it detects black lines, i utputs high level(1).
+
+Send the detected signal to the I/O port of the microcontroller. When i s high level (1), then the car is on the black line. Similarly, when i s low level (0), then the car is on the white ground.
+
+The two line tracking sensors on the expansion board are controlled b 12 and P13 of the micro bit control board, the left one is controlle y P13, and the right is controlled by P12. Adjust the line trackin ensors, and place the car on a black ground, twist the potentiometer ntil the LED (D3,D2) is on, then adjust them until it is off.
+
+2. Preparation
+
+（1）Insert the micro: bit correctly into the expansion board
+
+（2）Connect the battery holder to the expansion board
+
+（3）Turn on the power switch（Slide the POWER switch to ON end）
+
+（4）Connect the micro：bit and computer via a micro USB cable
+
+（5）Open the Web version of Makecode
+
+If you choose to load the project by importing the Hex file, you do
+not need to manually add the Mini car extension library.
+
+If you want to drag the code manually, add the Mini car extension
+library first(you can refer to the "1. Development environment
+configuration "file).
+
+3. Circuit Diagram
+
+![](media/cdf0c629a6425ff32d8629540d111f38.png)
+
+4. Read the Line Tracking Sensor
+
+You can upload the code “1-ReadSensor.hex”directly from the tutoria read the "Development Environment Configuration" file if in doubt).
+
+Or add the code blocks manually:
+
+Step 1：Set up a code framework for serial port printing.
+
+Go to“Serial”→“serial redirect to USB”，then put it into“on start”block.
+
+![](media/392bc5205f6bb62c7bf78720e989b8cd.png)
+
+![](media/6903d5a85a0dd305b4e3f64f216fc9b3.png)
+
+Step 2：Tap“Serial”→“serial write value”, then put it into“forever”.
+
+![](media/28fc50d2993f0fed4682e14f01737d96.png)
+
+Enter“Pins”→“digital read pin P0 ”, then put it at 0 of the“serial writ alue “x”=0”block.
+
+The left line tracking sensor is controlled by P13, and the right i ontrolled by P12. Here we take the right one as an example to read th igital signal.
+
+Click the drop-down triangle button behind P0 to select P12 and chang x" to "digital signal".
+
+![](media/b303c46c21bb74db5b7ec3f1c18791cd.png)
+
+Add a 1s delay
+
+![](media/46f5956588b18e0481e7a78492065780.png)
+
+Check the value printed by the serial port if your computer is Window 0
+
+![](media/2496f93e59b8725e222bad5ea5de1719.png)
+![](media/01bddb939ae8623f16bf1a5d20e768f2.png)
+
+If the operating system is less than Windows 10, the serial port tool i equired for printing. The software installation and tutorial ar ontained in the 3. Cool Term Software folder.
+
+5. Flow Chart
+
+![](media/a3e5f920083d0eebe8d648deb38db1f7.emf)
+
+6. Description of Line Tracking Sensor
+
+If you don’t add the library file, then“MiniCar”will not appear.
+
+![](media/767e09ed8f3075f2d9ea57f4061035ed.png)
+![](media/6317163f734a04b65216bb53aa96615f.png)
+
+“Line Tracking”is used to eliminate complex judgment expressions.
+
+<table>
+<colgroup>
+<col style="width: 35%" />
+<col style="width: 18%" />
+<col style="width: 21%" />
+<col style="width: 23%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>Value of Line Tracking</td>
+<td>P13(Left）</td>
+<td>P12（Right）</td>
+<td>State of the car</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>turn right</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>1</td>
+<td>0</td>
+<td>turn left</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>1</td>
+<td>1</td>
+<td>go forward</td>
+</tr>
+<tr class="odd">
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>stop</td>
+</tr>
+</tbody>
+</table>
+
+7. Test Code
+
+You can upload the code “2-TrackingSmart.hex”directly from the tutoria read the "Development Environment Configuration" file if in doubt).
+
+Or add the code blocks manually:
+
+Code”Read the return value of the sensor”
+
+Enter“Variable”bar to create a“value”variable, and put “set th alue”module into“forever”.
+
+![](media/ea182e3741bb9600dd169b5c75dc3a48.png)
+![](media/365a421b1cd6fb066b8658160f60f195.png)
+
+Tap“Mini Car”→“Line Tracking”, and put it at 0 of the “set th alue”module .
+
+![](media/02cac5028453a08c3acdaa47f8e1fe5f.png)
+![](media/401d5b5f53b63892a57a0df2be3f7a65.png)
+
+Code”Judge if the value=1”
+
+Go to“Logic”→“if”, then put it into “forever”.
+
+![](media/c5fffdfa65d38d719142ec95bafc24f3.png)
+
+Tap“Logic”→“=”, then put it into true of“if”module.
+
+![](media/f4b28773c2bd0e2cb942d2e6c6382e10.png)
+![](media/f1b9d1f46cbbeeb5c2dd2350882c6ec6.png)
+
+Enter“Variable”→“value”, and put it in the left side of “=”, then inpu umber 1 at the right side of “=”.
+
+![](media/f49008d66c309f1d2108b0bdbfddc7d5.png)
+![](media/1e9155b35b5495a7eb2afe80398dba8d.png)
+
+Code”The car turns right”
+
+If the value is equal to 1, the car will turn right.
+
+Add ”The car turns right”code into "if" module and set the speed to 7 if you have any questions about the car drive, please refer to Projec 4)
+
+![](media/c991d387aa5ceac779e6b575452129f6.png)
+
+if the value is not equal to 1, "else if" will be executed, then click
+![](media/d490e61dfc049e2f9208dcb0f6e564b5.png)
+twice to add it.
+
+![](media/79d76946d2dcd97bbd218ea395d3ebe0.png)
+
+Code”Judge if the value=2”
+
+Replicate the "=" code block into the "else if" diamond box and chang he number to "2" at the right side of the "="
+
+![](media/80d4cc35378a3681d42c28d0ccc5e337.png)
+
+Code”The car turns left”
+
+If the value is equal to 2, the car will turn left.
+
+Add ”The car turns left”code into "else if" and set the speed to 70.
+
+![](media/cf2d411ed316aace0e5baff4d9a7490a.png)
+
+If the value is not equal to 2, "else if" will be executed, then click
+![](media/d490e61dfc049e2f9208dcb0f6e564b5.png) t dd it.
+
+![](media/474ec5eab338b15b60e27d2a7be52915.png)
+
+Code”Judge if the value=3”
+
+Replicate the "=" code block into the "else if" diamond box and chang he number to "3" at the right side of the "="
+
+![](media/15b927a76f2dec6a8f3f685c5eb6913d.png)
+
+Code”The car goes forward”
+
+If the value is equal to 3, the car will go forward.
+
+Add ”The car goes forward”code into "else if" and set the speed to 70.
+
+![](media/7998f1860283791f051285388cc0ab18.png)
+
+Code”The car stops”
+
+If none of the above conditions are met, the stop code in else will b xecuted.
+
+![](media/2338a751ab47157b2c850a5f55f65bf9.png)
+
+Complete Program：
+
+![](media/3973fbd93fd9abaf0e912d6824b3c71c.png)
+
+8. Test Result
+
+Upload the code and open the power switch on the car. Place the car o he line tracking paper, then it will follow the black line to move.
+
+
+
+
+
+## Project 17: Ultrasonic Following and Obstacl voidance
+
+1. Description
+
+The ultrasonic sensor uses sonar to determine distance to an object lik ats do. It will emit the ultrasonic waves after trigger signals. Whe he ultrasonic waves encounter the object and are reflected back, th odule will output an echo signal, thus, it can determine the distanc f object from the time difference between trigger signal and ech ignal.
+
+As the picture shown, it is like two eyes. One is transmitting end, th ther is receiving end.
+
+![](media/69a8202b74cc5e35d712315eab88e95d.png)
+
+In this project, we will learn ultrasonic ranging, ultrasonic followin nd ultrasonic obstacle avoidance.
+
+2. Specifications
+
+- Working voltage：DC 3.3V-5V
+
+- Working current：50mA－100mA，normally is 65mA
+
+- Maximum power：0.5W
+
+- Maximum detection distance：3m
+
+- Blind spot：less than 4cm
+
+- Sensing angle：less than 15 degrees
+
+- Interface：4pin interface with a spacing of 2.54mm
+
+- Positioning hole ：3mm diameter
+
+- Working temperature： -10℃ - +60℃
+
+- Dimension：49mm\*22mm\*19mm
+
+3. Working Principle
+
+![](media/8ff02741199a0f03d8d814a4b72f27d7.png)
+
+(1)Pull down TRIG then trigger high level signals with least 10us;
+
+(2)After triggering, the module will automatically send eight 40KH ltrasonic pulses and detect whether there is a signal return;
+
+(3)If there is a signal return, when ECHO outputs a high level, then th uration of the high level is the time from transmission to reception o he ultrasonic waves. Then test distance = high level duration
+\*340m/s\*0.5. 
+
+4. Preparation
+
+（1）Insert the micro: bit correctly into the expansion board
+
+（2）Connect the battery holder to the expansion board
+
+（3）Turn on the power switch（Slide the POWER switch to ON end）
+
+（4）Connect the micro：bit and computer via a micro USB cable
+
+（5）Open the Web version of Makecode
+
+(6 ) Install the ultrasonic to the expansion board
+
+If you choose to load the project by importing the Hex file, you do no eed to manually add the Mini car extension library.
+
+If you want to drag the code manually, add the Mini car extensio ibrary first(you can refer to the "1. Development environmen onfiguration "file).
+
+5. Code Explanation
+
+If you don’t add the library file, then“MiniCar”will not appear.
+
+![](media/901dbabd853fb4d640a07d55a63250ef.png)
+
+“Ultrasonic "can be used to obtain the distance of ultrasonic induction 14 is Trig and P15 is Echo.
+
+6. Code for Ultrasonic Ranging
+
+Upload the“code-1.hex”file directly from the tutorial
+
+Complete Program：
+
+![](media/12aeec27b62cc73fe5460c9fb9e28829.png)
+
+Check the value printed by the serial port if your computer is Window 0
+
+![](media/b9675eeca2dd343d766cfad11d36635b.png)
+
+If the operating system is less than Windows 10, the serial port tool i equired for printing. The software installation and tutorial ar ontained in the 3. Cool Term Software folder.
+
+7. Flow Chart of Ultrasonic Following
+
+![](media/4c18ff1fdb724fd8e136d36fe6c042b6.emf)
+
+8. Code for Ultrasonic Following
+
+You can upload the code “code-2.hex”directly from the tutorial (read th Development Environment Configuration" file if in doubt).
+
+Or add the code blocks manually:
+
+Code ”Assign the value detected by ultrasonic to distance“
+
+Create a new variable named "distance" and assign the value measured b he ultrasonic sensor to it.
+
+![](media/347b7d95751d75915fbc9899c078c1e9.png)
+
+Add“if”block
+
+![](media/dd85b494f8b4ccce13a5cf37b76ecb1c.png)
+
+Code ”Distance≥10 and≤30?“
+
+Add "and" to the condition box of the "if" block, and add "=" to bot ides of "and" , then change the left "=" to "distance ≥ 10", the "=" o he right to "distance ≤ 30".
+
+![](media/6cc986ddc46e8acec93713676c647f3d.png)
+
+Code ”The car goes forward“
+
+If distance≥10 and≤30, then the car goes forward.
+
+Add the ”The car goes forward“ Code into “if“, and set the speed to 100.
+
+![](media/e9f5380d08f01064b8c9b24d8bd99be7.png)
+
+If the condition is not met, "else if" will be executed, then click
+![](media/e5c4f6f7facf6b6bcb9ae02a5e970311.png)twic o add it.
+
+![](media/4f86773bd8f48ed558761c997b87994e.png)
+
+Code ”Distance≤ 6?“
+
+Add "=" into else if and set it to“distance ≤ 6”
+
+![](media/d78541532c751183cd3611b4a8705e8b.png)
+
+Code ”The car goes backward“
+
+If distance≤6, then the car goes backward.
+
+Add the ”The car goes backward“ Code into “else if“, and set the spee o 100.
+
+![](media/f9d75b497dd644ba6c2deb43164e0668.png)
+
+If the condition is not met, "else if" will be executed, click
+![](media/e5c4f6f7facf6b6bcb9ae02a5e970311.png) t dd it.
+
+Code ”Distance \>6 and \<10 or \>30?“
+
+Add“or”block into else if, then add “distance ＞ 30”at “or”on the righ ide.
+
+![](media/624ee7483d695cd7fcec914b9162cf22.png)
+
+Add“and”to the right side of
+“or”![](media/fa087c032df76025fea532c192390f5b.png)
+
+Add“＞”to the left side of “and”, add “＜”to the right side
+
+![](media/e922e6da508d35d38067b1f821b7c7f3.png)
+
+Set the left side of the "and" code block to "distance \> 6" and th ight side to "distance \< 10".
+
+![](media/984354b88d3bad74d3f9cc16a62aa400.png)
+
+Code ”The car stops“
+
+If distance \>6 and \<10 or \>30, the the car will stop.
+
+Add Code ”The car stops“ into else if and set delay time to 300ms.
+
+![](media/f6fadc592ff4bbb0f67e4d182c7284e2.png)
+
+Tap![](media/1b16d0a48bb1490dfbb63dad934c92a4.png)
+to delete the else
+
+Complete Program：
+
+![](media/af951ebdffe8775239e10df33fe26a51.png)
+
+  . Flow Chart of Ultrasonic Obstacle Avoidance
+
+![](media/2661bdcffda501583ad3f21afce442b6.emf)
+
+10. Code for Ultrasonic Obstacle Avoidance
+
+Upload the code“code-3.hex” directly from the tutorial
+
+Code ”Assign the value detected by ultrasonic to distance“
+
+Create a new variable named "distance" and assign the value measured b he ultrasonic sensor to it.
+
+![](media/ef4b5412cc8fa2b541cf9c7453f16928.png)
+
+Code ”Distance \>10？“
+
+Add if code block and set the condition to distance \>10
+
+![](media/6776653123da527213e61e5c82165a14.png)
+
+If the distance \>10, then the car will go forward.
+
+Add the speed to 70
+
+![](media/0a65e5a40d6fc11daa6c3e33b30542e2.png)
+
+If the condition is not met, click
+![](media/e5c4f6f7facf6b6bcb9ae02a5e970311.png) t dd else, and add the car turns left code to it and set the speed to 70 elay in 200ms.
+
+![](media/b8f1205dcea3b0ba93f5f4c2dcbdcb59.png)
+
+Complete Program：
+
+![](media/077446d4d95e0e95f33a5ebbed7b17ab.png)
+
+Upload the code and open the power switch on the car. If there is a bstacle in front of the car within 10cm, the car will turn left.
+
+
+
+
+
+## Project 18: IR Remote Control Smart Car
+
+1. Description
+
+There is no doubt that infrared remote control is ubiquitous in dail ife. It is used to control various household appliances, such as TVs tereos, video recorders and satellite signal receivers. It is compose f infrared transmitting and infrared receiving systems, that is, a nfrared remote control, an infrared receiving module and a single-chi icrocomputer capable of decoding.​
+
+![](media/9980b41f57feddc2e8a9c0346afaaea9.png)
+
+The 38K infrared carrier signal emitted by remote controller is encode y the encoding chip in the remote controller. It is composed of  ection of pilot code, user code, user inverse code, data code, and dat nverse code. The time interval of the pulse is used to distinguis hether it is a 0 or 1 signal and the encoding is made up of these 0,  ignals.
+
+The user code of the same remote control is unchanged. The data code ca istinguish the key.
+
+When the remote control button is pressed, the remote control sends ou n infrared carrier signal. When the IR receiver receives the signal he program will decode the carrier signal and determines which key i ressed. The MCU decodes the received 01 signal, thereby judging wha ey is pressed by the remote control.
+
+Infrared receiver we use is an infrared receiver module. Mainly compose f an infrared receiver head, it is a device that integrates reception mplification, and demodulation. Its internal IC has complete emodulation, and can achieve from infrared reception to output and b ompatible with TTL signals. Additionally, it is suitable for infrare emote control and infrared data transmission.
+
+The infrared receiver module on the expansion board of the car i ontrolled by the P16 of the micro bit control board.
+
+2. Specifications
+
+- Working Voltage：3.3-5V（DC）
+
+- Interface：3PIN
+
+- Output Signal：Digital signal
+
+- Receiving Angle：90 degrees
+
+- Frequency：38khz
+
+- Receiving Distance: about 5m
+
+3. Circuit Diam
+
+![](media/82380b0176cb9fe4bfdd49a9d1cbe771.png)
+
+4. Preparation
+
+（1）Insert the micro: bit correctly into the expansion board
+
+（2）Connect the battery holder to the expansion board
+
+（3）Turn on the power switch（Slide the POWER switch to ON end）
+
+（4）Connect the micro：bit and computer via a micro USB cable
+
+（5）Open the Web version of Makecode
+
+If you choose to load the project by importing the Hex file, you do no eed to manually add the Mini car extension library.
+
+If you want to drag the code manually, add the Mini car extensio ibrary first(you can refer to the "1. Development environmen onfiguration "file).
+
+5. Code for Receiving IR Signal
+
+Upload the code“code-1.hex” directly from the tutorial
+
+Or add them manually:
+
+Put the IR pin setting into “on start”, and set the pin to P16
+
+![](media/66f971c3d894c70a366f1b1b9fcf90a1.png)
+
+Complete Program：
+
+![](media/bc43a75d7139e369bd3b21d8c4d5416e.png)
+
+Check the value printed by the serial port if your computer is Window 0
+
+![](media/6f6d10b9111646cfce14df639638b4ed.png)
+
+If the operating system is less than Windows 10, the serial port tool i equired for printing. The software installation and tutorial ar ontained in the 3. Cool Term Software folder.
+
+Through the obtained values, we made an key value table for the infrare emote control:
+
+![](media/db524e7e2d5a77652948837ed70a1310.jpg)
+
+6. Flow Chart
+
+![](media/1d173d88aee1c2a055f180adb3a5891a.emf)
+
+7. Code for IR Remote Control Smart Car
+
+Upload the code“code-2.hex” directly from the tutorial
+
+Or add them manually:
+
+Code ”Assign the signal received by the IR receiver to Value”
+
+Put the IR pin setting into “on start”, and set the pin to P16, the reate a variable named value.
+
+![](media/66f971c3d894c70a366f1b1b9fcf90a1.png)
+![](media/ccaf5750fb3b4c6c637fcf0560dd1928.png)
+
+Assign the value received of the IR receiver to Value in“forever”
+
+![](media/c94ab9223a321e460e2e274a913b0c09.png)
+
+Add “if”into “forever”, then tap
+![](media/d4c8ea2b5d017f1cdbdb40cb6d8959ba.png) fo  times, then click
+![](media/863a4037d988e8ad92a2aa77e71c68b8.png).
+
+![](media/5b01ecea8b5360ed8821723d655d2df1.png)
+
+Enter“value = 70”in the first if box，then add the car goes forwar ode, set the speed to 100.
+
+![](media/4309386c8ecdfbee09d76200dfc07f3d.png)
+
+Enter“value = 68”in the second if box，then add the car turns left code et the speed to A：70，B：130.
+
+![](media/2bacc3ee2e6b8b5189cc8bebd9b9f51d.png)
+
+Enter“value = 67”in the third if box，then add the car turns right code et the speed to A：130，B：70.
+
+![](media/5c7444427f21351f03ad36593c22db4a.png)
+
+Enter“value = 21”in the next if box，then add the car goes backwar ode, set the speed to 100.
+
+![](media/f2765576edccbdcfe312e36a4ab0f878.png)
+
+Enter“value = 64”in the last if box，then add the car stops code, se he speed to 0.
+
+![](media/c3da504040c231150fe32871452f79a9.png)
+
+![](media/3503275940a903daf4adf4e60ae94a9e.png)
+
+After uploading the code, then we can use the IR remote control t ontrol the car to move.
+
+
+
+
+
+## Project 19: Multi-purpose Bluetooth Smar ar
+
+1. Description
+
+The micro:bit control board boasts a Bluetooth, which enables to contro nd communicate with the micro:bit. Furthermore, it supports bot ndroid and IOS devices (phones and ipads) and the micro:bit can sen ignals back to a mobile phone or computer via it.
+
+Moreover, it can communicate with the mobile phone Bluetooth APP, whic s a software that empowers to control the micro:bit external device.
+
+In this project, we will learn its interface and function of every ico nd use it to connect the Bluetooth of the micro:bit in a way that read he control characters sent by each button.
+
+![](media/55b2424d88ba1ba8a711c49418ca8dc6.png)
+
+- （Bluetooth Antenna and Chip）
+
+2. Preparation
+
+（1）Insert the micro: bit correctly into the expansion board
+
+（2）Connect the battery holder to the expansion board
+
+（3）Turn on the power switch（Slide the POWER switch to ON end）
+
+（4）Connect the micro：bit and computer via a micro USB cable
+
+（5）Open the Web version of Makecode
+
+If you choose to load the project by importing the Hex file, you do no eed to manually add the Mini car extension library.
+
+If you want to drag the code manually, add the Mini car extensio ibrary first(you can refer to the "1. Development environmen onfiguration "file).
+
+3. Add the Library File of Bluetooth
+
+Tap“Extensions”
+
+![](media/d9ca2854c8ae1c8c2755195b94204e19.png)
+
+Enter "bluetooth" in the search box, then click the first bluetooth luetooth and radio can not work together due to micro:bit hardware hus their extension libraries are incompatible. When you install th luetooth extension library, please remove the radio extension.
+
+![](media/45c291a8927d49a90afbcf1dfe1bec8e.png)![](media/055833c42aa09b5bccd723e637b6b7a6.png)
+
+4. Code for Bluetooth Receiving Data
+
+Import the“Read-the-data-of-Bluetooth-1.hex” file
+
+Or you could edit code step by step in the editing area.
+
+1)  Enter“Advanced” →“Serial” → “serial redirect t    USB”
+
+Place it into“on start”
+
+![](media/73b63660eb8f378dea4930f354d04de6.png)
+
+2)  Click“Bluetooth”→“on bluetooth connected”
+
+Go to“Basic”to move“show icon”block into“on bluetooth connected” block.
+
+![](media/501b8068bafd00adcf138a2b828835d9.png)
+
+3)  Click“Variables”→“Make a Variable...”→“New variable name：”dialo    box.
+
+Input“connected” and click “OK” to create variable“connected”.
+
+Drag“set connected to 0” under block “show icon” and change 0 into 1.
+
+4)  Go to“Loops”to move block“while true do...”into“on bluetoot    connected”block.
+
+Enter“Logic”to drag out “=”block.
+
+Click“Variables” to drag “connected” into left box of “=” block an hange 0 into 1.
+
+![](media/665a62b4895ca45f82d3ebc88e885bce.png)
+
+5)  Then we generate variable“rec_data”in same way.
+
+Then drag out“set rec_data to 0”and place it into block“whil onnected=1 do...”block.
+
+Click“Bluetooth” →“more” →“bluetooth uart read until new line( )”
+
+Keep it into 0 box and click triangle button to select \#.
+
+![](media/e993122756294214c561f660c3df07ea.png)
+
+6)  Go to“Advanced”→“Serial”→“serial write string”
+
+Move it below“set rec_data...until#” block
+
+And combine variable“rec_data”with“serial write string”block.
+
+![](media/6effc725f7d85e4a72afbcee102cc478.png)
+
+7)  Click“Advanced” →“Serial” →“serial write line” and edit code strin    as follows:
+
+![](media/5d66f2053f858d7a3f2e0af55bcc0f0f.png)
+
+8)  Go to“Bluetooth”→“on bluetooth disconnected”
+
+Copy“show icon”block and keep it into block“on bluetooth disconnected”
+
+Click triangle button t elect“![](media/25e0341e063286ff7828c15f09ae0ade.png)”pattern.
+
+![](media/689000dc16e8fb32f0d9918445aae4c1.png)
+
+Complete Program
+
+![](media/9ced4bb5984def272efaa65bb315644b.png)
+
+Click “Setting”→“Project Settings”, and input“Read the data o luetooth”, then set No Pairing to on.(Only drag code blocks manuall equires this operation)
+
+![](media/ee2b0ac1337206993b954209931be8dd.png)
+![](media/09767d5efdc8f05fdb331b5ae6d352b5.png)
+
+Check the value printed by the serial port if your computer is Window 0
+
+![](media/eeefed32a1c90b2f58335fa24915d6e8.png)S
+
+If the operating system is less than Windows 10, the serial port tool i equired for printing. The software installation and tutorial ar ontained in the 3. Cool Term Software folder.
+
+5. Download APP
+
+Android System：
+
+Find "keyes mini car" in the Google Store
+
+Tap install
+
+IOS System：
+
+Open App Store
+
+Search keyes mini car，then download the APP to your phone.
+
+![](media/4f1bf3e69998025b0988b11cf921d3b5.png)
+
+6. Introduction of APP
+
+![](media/eed1c874b5c56780ad8318aea33a141c.png)
+
+①Click“connect” to find“BCC micro:bit”Bluetooth.
+
+If "is connected" is displayed, the connection is successful
+
+![](media/11a8165a0156cbe1684b67cfe4bbc080.png)
+
+![](media/dc9cc5a47342ab29c4fc8ddee5c7e6e6.png)
+
+②Disconnect the Bluetooth
+
+③It is used to control the car to go forward. Press:“F” Release:“S”
+
+④It is used to control the car to turn left. Press:“L” Release:“S”
+
+⑤It is used to control the car to turn right. Press:“R”Release:“S”
+
+⑥It is used to control the car to go backward. Press:“B”Release:“S”
+
+⑦This is the button of car function mode. After clicking, four pattern ill appear, as follows:
+
+![](media/2e003113c115018ddae6ff78055b3af6.png)
+
+The first is obstacle avoidance button, the second is following button he third is the line tracking button, the fourth is the light trackin utton.
+
+⑧It is used to control the RGB，tap it then colors will appear：red reen, blue，yellow， cyan，purple and black.
+
+![](media/be436c329eda53e075d969859c02397e.png)
+
+⑨It is used to control the speaker，tap it then piano keys will appear：
+
+![](media/66fbb4e385f5456417aff58c1c40ec56.png)
+
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 22%" />
+<col style="width: 57%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>Letter</td>
+<td>Sound</td>
+<td><a href="javascript:;">Numbered Musical Notation</a></td>
+</tr>
+<tr class="even">
+<td>C</td>
+<td>D0</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>D</td>
+<td>RE</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td>E</td>
+<td>MI</td>
+<td>3</td>
+</tr>
+<tr class="odd">
+<td>F</td>
+<td>FA</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td>G</td>
+<td>SO</td>
+<td>5</td>
+</tr>
+<tr class="odd">
+<td>A</td>
+<td>LA</td>
+<td>6</td>
+</tr>
+<tr class="even">
+<td>B</td>
+<td>SI</td>
+<td>7</td>
+</tr>
+</tbody>
+</table>
+
+7. Flow Chart
+
+![](media/f8b601d67252f51ebe9cc6320a36d9a7.png)
+
+8. Code for Multi-purpose Bluetooth Smar ar
+
+This part of the code is a combination of the previous projects:
+
+![](media/c8390c6e8b5fbd5cf20ed09b806bad34.png)
+
+Code Explanation：
+
+“Q”: Obstacle avoidance mode “W”: Following mode
+
+“E”: Line tracking mode “T”: Light tracking mode “A”: Stop mode
+
+“LED OFF“ module is used to clear the LED status of the previous code
+
+If the bluetooth is disconnected, the micro：bit wil isplay![](media/0ee444ecbb1bf66c4b679c795e65e72e.png)
+
+If the bluetooth is connected, the，micro：bit wil isplay![](media/acf4e02083c01a9bc54a4a9664ac9ff1.png)
+
+The control function is used for Bluetooth controls car. If th luetooth receives the character "F", the car will go forward . You ca lick the arrow on the right to check the code
+
+![](media/5fa1549976bff5e2b8b7d27de2301f23.png)
+
+1\. LED_RGB function is used to control the RGB LEDs. When receivin r", LED will be red, if "g" appears, it will be green, when receivin b" , it will be blue, when receiving "y" , it will be yellow, whe eceiving "c", it will be cyan, when receiving "p", it will be purple hen receiving "x" , it will be off.
+
+2\. LightFollow function is used for light tracking
+
+3\. Music function is used to control the speaker. When receiving“1” he buzzer will sound“DO”，when receiving“2”, it will sound“RE”，whe eceiving“3”, it will sound“MI”，when receiving“4”, it wil ound“FA”，when receiving“5”, it will sound “SO”，when receiving“6”, i ill sound“LA”，when receiving“7”, it will sound“SI”，when receiving“8” t will sound“DO”，when receiving“9”, it will won’t work..
+
+4\. LineTracking function is used for line tracking
+
+5\. Avoid function is used for obstacle avoidance
+
+6\. UltrasonicFollow is used for following
+
+7\. Speed buffer function is used for speed buffer. The car move orward suddenly in the static state, the head of the car will be lifte ue to the inertia, thus a buffer action of speed is needed (no buffe s needed if the speed is below 100).
+
+
+
+
+

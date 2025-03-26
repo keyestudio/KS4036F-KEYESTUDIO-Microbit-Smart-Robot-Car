@@ -1,0 +1,685 @@
+# Microbit Robot Car Tutorial
+
+## Project 13：RGB Module
+
+1. Description
+
+The RGB color mode is a color standard in the industry. It obtain arious colors by changing the three color channels of red (R), gree G), and blue (B) and integrating them. RGB denotes the three colors o ed, green and blue.
+
+The monitors mostly adopt the RGB color standard, and all the colors o he computer screen are composed of the three colors of red, green an lue mixed in different proportions. A group of red, green and blue i he smallest display unit. Any color on the screen can be recorded an xpressed by a set of RGB values.
+
+![](media/afc068defa4e1ef3a0b0c350aba05f26.png)
+
+RGB color mixing is like having red, green and blue lamps. When thei ight is superimposed on each other, the colors are mixed, while th rightness is equal to the sum of the brightness of the three lamps. Th ore mixed, the higher the brightness, therefore, it is often calle even-color LED.
+
+<table>
+<colgroup>
+<col style="width: 22%" />
+<col style="width: 25%" />
+<col style="width: 22%" />
+<col style="width: 29%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>Color</td>
+<td>RGB value（R,G,B）</td>
+<td>Color</td>
+<td>RGB value（R,G,B）</td>
+</tr>
+<tr class="even">
+<td>Black</td>
+<td>255,255,255</td>
+<td>Red</td>
+<td>0,255,255</td>
+</tr>
+<tr class="odd">
+<td>Green</td>
+<td>255,0,255</td>
+<td>Blue</td>
+<td>255,255,0</td>
+</tr>
+<tr class="even">
+<td>Cyan</td>
+<td>255,0,0</td>
+<td>Dark red</td>
+<td>0,255,0</td>
+</tr>
+<tr class="odd">
+<td>Yellow</td>
+<td>0,0,255</td>
+<td>White</td>
+<td>0,0,0</td>
+</tr>
+<tr class="even">
+<td>......</td>
+<td>.......</td>
+<td>......</td>
+<td>......</td>
+</tr>
+</tbody>
+</table>
+
+Since our LED lights are [common anode](javascript:;), 255 is the lowes alue and 0 is the brightest value.
+
+In this project, we are going to make two experiments. One is to mak wo RGB lights light up three colors of red, green and blue, the othe s to make two RGB lights gradually display different colors.
+
+2. Preparation
+
+（1）Insert the micro: bit correctly into the expansion board
+
+（2）Connect the battery holder to the expansion board
+
+（3）Turn on the power switch（Slide the POWER switch to ON end）
+
+（4）Connect the micro：bit and computer via a micro USB cable
+
+（5）Open the Web version of Makecode
+
+If you want to add the Mini car extension library(you can refer to the
+"1. Development environment configuration "file).
+
+3. Schematic Diagram
+
+![](media/85f1916d4a6a4777fe3ced20137a2b08.png)
+
+![](media/dd4476449cac69cd49ab641646d12eb3.png)
+
+Working Principle: Microbit, as the host, sends instructions to th lave STC8G1K08 through the IIC, then the slave outputs PWM to contro GB LED lights. This greatly saves the IO ports of the microbit board or the IIC enables to control two motors and two RGB LED lights.
+
+4. Code Explanation
+
+Functions of RGB LEDs in Keyes_MiniCar.py file:
+
+Left.red(0-255): Set the left RGB to red，0 is the brightest and 255 i he darkest.
+
+Left.green（0-255): Set the left RGB to green，0 is the brightest an 55 is the darkest.
+
+Left.blue（0-255）: Set the left RGB to blue，0 is the brightest and 25 s the darkest.
+
+right.red（0-255）: Set the right RGB to red，0 is the brightest and 25 s the darkest.
+
+right.green（0-255）: Set the right RGB to green，0 is the brightest an 55 is the darkest.
+
+right.blue（0-255）: Set the right RGB to blue，0 is the brightest an 55 is the darkest.
+
+5. Test Code
+
+You can upload the “**code_1.py**”file directly from the tutorial (rea he "Development Environment Configuration" file if in doubt).
+
+Code 1:
+
+```python
+from microbit import *
+from keyes_MiniCar import *
+minicar = MiniCar()
+
+while True:
+    minicar.left_red(0)
+    minicar.right_red(0)
+    sleep(1000)
+    minicar.led_off()
+    minicar.left_green(0)
+    minicar.right_green(0)
+    sleep(1000)
+    minicar.led_off()
+    minicar.left_blue(0)
+    minicar.right_blue(0)
+    sleep(1000)
+    minicar.led_off()
+```
+
+
+Test Result: After uploading the code, the RGB LED will switch ever econd in the order of red, green and blue.
+
+Import the “**code_2.py**”file
+
+Code 2:
+
+
+```python
+from microbit import *
+from keyes_MiniCar import *
+minicar = MiniCar()
+
+while True:
+    for num in range(0 , 255):
+        num += 1
+        minicar.left_red(255 - num)
+        minicar.right_red(255 - num)
+        sleep(10)
+
+    for num in range(0 , 255):
+        num += 1
+        minicar.left_green(255 - num)
+        minicar.right_green(255 - num)
+        sleep(10)
+
+    for num in range(0 , 255):
+        num += 1
+        minicar.left_red(num)
+        minicar.right_red(num)
+        sleep(10)
+
+    for num in range(0 , 255):
+        num += 1
+        minicar.left_blue(255 - num)
+        minicar.right_blue(255 - num)
+        sleep(10)
+
+    for num in range(0 , 255):
+        num += 1
+        minicar.left_red(255 - num)
+        minicar.right_red(255 - num)
+        sleep(10)
+
+    for num in range(0 , 255):
+        num += 1
+        minicar.left_green(num)
+        minicar.right_green(num)
+        sleep(10)
+
+    for num in range(0 , 255):
+        num += 1
+        minicar.left_red(num)
+        minicar.right_red(num)
+        sleep(10)
+
+    for num in range(0 , 255):
+        num += 1
+        minicar.left_blue(num)
+        minicar.right_blue(num)
+        sleep(10)
+```
+
+
+
+Test Result: After uploading the code, the RGB LED will be red, an hen green, then a mixture of red and green will appear. When the re ight is off, the blue light will be on, then a mixture of blue an reen will be displayed.
+
+However, when the green light is off, the red light will be on, then  ixture of blue and red will be shown. In closing the red and blu ights will be off.
+
+6. Expanded Knowledge
+
+1s = 1000ms ； 1ms = 1000us ；1us = 1000nm
+
+Then the 1000 ms we used in the project is 1 s
+
+![](media/512726c47216d19d29ea1643dad4fa46.png)
+
+Maybe you are capable of configuring the light color you want b ourself. You solely need to configure the red, green and blue PWM fo he RGB.
+
+
+
+
+
+## Project 14: Motor Driving
+
+1. Description
+
+The robot car is equipped with two DC geared motors, which are develope n the ordinary DC motors. It enjoys a matching gear reduction box hich provides a lower speed but a larger torque. Furthermore, differen eduction ratios of the box can provide different speeds and torques.
+
+The reduction motor is the integration of gearmotor and motor, which i pplied widely in steel and machine industry.
+
+Moreover, the car boasts a STC8G1K08 and a HR8833MTE chip. To save th O ports, we send instructions to the STC8G1K08 chip through the IIC o he micro:bit, then the STC8G1K08 chip controls the HR8833MTE chi ccording to the corresponding instructions to control the rotatio irection and speed of the two DC reduction motors (the control proces s as follows).
+
+![](media/bbf95193fbacad7cb587d5b0a3767654.png)
+
+2. Preparation
+
+（1）Insert the micro: bit correctly into the expansion board
+
+（2）Connect the battery holder to the expansion board
+
+（3）Turn on the power switch（Slide the POWER switch to ON end）
+
+（4）Connect the micro：bit and computer via a micro USB cable
+
+（5）Open the Web version of Makecode
+
+If you want to add the Mini car extension library(you can refer to the
+"1. Development environment configuration "file).
+
+3. Circuit Diagram
+
+![](media/78b5a35bedaf4ce0b8ad3f850765e4f5.png)
+
+![](media/14397c83373c6ff919baccef6e0a83ec.png)
+
+4. Code Explanation
+
+Functions in Keyes_MiniCar.py file：
+
+Motor_L(1, 70): The left wheels will advance with a speed of PWM70
+
+Motor_L(0, 70): The left wheels will move back with a speed of PWM70
+
+Motor_R(1, 70): The right wheels will advance with a speed of PWM70
+
+Motor_R(0, 70): The right wheels will move back with a speed of PWM70
+
+Motor_stop(): The car will stop
+
+5. Test Code
+
+You can upload the“**motor.py**”code directly from the tutorial (rea he "Development Environment Configuration" file if in doubt).
+
+Code:
+
+
+```python
+from microbit import *
+from keyes_MiniCar import *
+minicar = MiniCar()
+
+while True:
+    #Forward
+    minicar.Motor_L(1, 70)
+    minicar.Motor_R(1, 70)
+    sleep(1000)
+    #back
+    minicar.Motor_L(0, 70)
+    minicar.Motor_R(0, 70)
+    sleep(1000)
+    #turn left
+    minicar.Motor_L(0, 70)
+    minicar.Motor_R(1, 70)
+    sleep(1000)
+    #turn right
+    minicar.Motor_L(1, 70)
+    minicar.Motor_R(0, 70)
+    sleep(1000)
+    minicar.Motor_stop()
+    sleep(1000)
+```
+
+
+
+6. Test Result
+
+Upload the code to the micro:bit board, then turn on the switch at th ack of the car, then the car will go forward for 1s, backward for 1s urn left for 1s, turn right for 1s and stop for 1s.
+
+7. Expanded Knowledge
+
+How to make the motor turn left?
+
+①Set the A motor to backward, the B motor to forward, which is a lef urn at the center of the distance between the two wheels.
+
+②Set the A motor to stop, the B motor to forward, which is a left tur t the center of the left motor.
+
+③Set the AB motors to forward, then set the speed of the motor on th eft to be smaller than that on the right. In this way, the car wil ove to the left when moving forward due to the speed difference, an he greater the speed difference, the greater the deviation.
+
+④Set the AB motors to backward, then set the speed of the motor on th eft to be greater than that on the right. In this way, the car wil ove to the left when moving backward due to the speed difference, an he greater the speed difference, the greater the deviation.
+
+The principle of making the car turn right is the same, you only need t witch the motor.
+
+
+
+
+
+## Project 15: Light Tracking Smart Car
+
+1. Description
+
+Do you find that the street lights outside will light up when it get ark and goes off at dawn? Next, we will learn the main component tha auses this circumstance, which is "photoresistor".
+
+Working Principle: It is a resistor made by the photoelectric effec f a semiconductor, which is very sensitive to ambient light, thus it esistance value will vary with different light intensity.
+
+We seek to use this feature to design a circuit and generate  hotoresistor module. The signal end of the module is connected to th nalog port of the microcontroller.
+
+When the light intensity increases, the resistance decreases, and th oltage of the analog port rises, that is, the analog value of th icrocontroller goes up. Otherwise, when the light intensity decreases he resistance increases, and the voltage of the analog port declines hat is, the analog value of the microcontroller becomes smaller herefore, we can use the photoresistor to read the corresponding analo alue and sense the light intensity in the environment.
+
+It is commonly applied to light measurement, control and conversion ight control circuit as well.
+
+In this project, we will use the left and right photoresistors t ontrol the car to find the light source.
+
+2. Preparation
+
+（1）Insert the micro: bit correctly into the expansion board
+
+（2）Connect the battery holder to the expansion board
+
+（3）Turn on the power switch（Slide the POWER switch to ON end）
+
+（4）Connect the micro：bit and computer via a micro USB cable
+
+（5）Open the Web version of Makecode
+
+If you want to add the Mini car extension library(you can refer to the
+"1. Development environment configuration "file).
+
+3. Circuit Diagram
+
+![](media/d9b391d95bdb353297c7d65b3319db50.png)
+
+4. Read the Photoresistor
+
+You can upload the code “**code_1.py”** directly from the tutorial (rea he "Development Environment Configuration" file if in doubt).
+
+Code 1：
+
+```python
+from microbit import *
+
+while True:
+    LDR_L = pin1.read_analog()
+    LDR_R = pin0.read_analog()
+    print("LDR_L:", LDR_L)
+    print("LDR_R:", LDR_R)
+    sleep(1000)
+```
+
+Test Result: Download code 1 onto micro:bit board, don’t plug off US able. Click“REPL”and press the reset button, then the BBC microbit REP indow displays the ambient light intensity detected by th hotoresistor on the expansion board. As the external light intensit nd gradually decreases, the analog value gradually decreases. On th ontrary, the analog value is gradually increasing.
+
+![](media/4a0355a530804a409d9714c326d1ff4f.png)
+
+6. Flow Chart
+
+![](media/b6322b372595be0a6834ae9df3195eb1.emf)
+
+7. Light Tracking Smart Car
+
+You can upload the code “**code_2.py”** directly from the tutorial (rea he "Development Environment Configuration" file if in doubt).
+
+
+```python
+from microbit import *
+from keyes_MiniCar import *
+minicar = MiniCar()
+
+while True:
+    LDR_L = pin1.read_analog()
+    LDR_R = pin0.read_analog()
+    if LDR_L > 650 and LDR_R > 650:
+        minicar.Motor_L(1, 70)
+        minicar.Motor_R(1, 70)
+    elif LDR_L > 650 and LDR_R <= 650:
+        minicar.Motor_L(0, 70)
+        minicar.Motor_R(1, 70)
+    elif LDR_L <= 650 and LDR_R > 650:
+        minicar.Motor_L(1, 70)
+        minicar.Motor_R(0, 70)
+    else:
+        minicar.Motor_stop()
+```
+
+
+
+7. Test Result
+
+After uploading the code, turn on the switch on the rear of the car hen you can use the flashlight to play with the car. It’s best used i  relatively dark environment. When the ambient light intensity is abov 50, the car will keep moving.
+
+
+
+
+
+## Project 16: Line Tracking Smart Car
+
+1. Description
+
+The car comes with two line tracking sensors and two potentiometers.
+
+Besides, it adopts a TCRT5000 IR tube, which contains an IR emittin ube and an IR receiving tube. When the infrared signals of the emittin ube is received by the receiving tube through reflection, th esistance of the receiving tube will change, which is generall eflected in the voltage change on the circuit.  
+
+The resistance varies depending on the intensity of the infrared signal eceived by the receiving tube, which is often in the color of th eflecting surface and its distance of the receiving tube. At the tim f detection, black is high level active and white is low level active. 
+
+Working Principle: When the car runs above a white road, the I mitting tube installed under the car emits infrared signals to detec he road and the receiving tube will receive signals sending back. The he output end outputs low level(0). When it detects black lines, i utputs high level(1).
+
+Send the detected signal to the I/O port of the microcontroller. When i s high level (1), then the car is on the black line. Similarly, when i s low level (0), then the car is on the white ground.
+
+The two line tracking sensors on the expansion board are controlled b 12 and P13 of the micro bit control board, the left one is controlle y P13, and the right is controlled by P12. Adjust the line trackin ensors, and place the car on a black ground, twist the potentiometer ntil the LED (D3,D2) is on, then adjust them until it is off.
+
+2. Preparation
+
+（1）Insert the micro: bit correctly into the expansion board
+
+（2）Connect the battery holder to the expansion board
+
+（3）Turn on the power switch（Slide the POWER switch to ON end）
+
+（4）Connect the micro：bit and computer via a micro USB cable
+
+（5）Open the Web version of Makecode
+
+If you want to add the Mini car extension library(you can refer to the
+"1. Development environment configuration "file).
+
+3. Circuit Diagram
+
+![](media/cdf0c629a6425ff32d8629540d111f38.png)
+
+4. Read the Line Tracking Sensor
+
+You can upload the code “**code_1.py**”directly from the tutorial (rea he "Development Environment Configuration" file if in doubt).
+
+Code 1:
+
+```python
+from microbit import *
+pin12.set_pull(pin12.PULL_UP)
+pin13.set_pull(pin13.PULL_UP)
+sensor_L = 0
+sensor_R = 0
+
+while True:
+    sensor_L = pin13.read_digital()
+    sensor_R = pin12.read_digital()
+    print("sensor_L:", sensor_L)
+    print("sensor_R:", sensor_R)
+    sleep(1000)
+```
+
+
+Test Result: Download code 1 onto micro:bit board, don’t plug of SB cable. Click“REPL”and press the reset button, the readings detecte y the line tracking sensor will be displayed on monitor.
+
+When the line tracking sensor detects white object, 0 will be shown an 2, D3 will be on; when no white objects and only black object ar etected, 1 will be displayed and D2, D3 will be off, as shown below.
+
+![](media/f3067207eec1e0833565e19434f8a9f1.png)
+
+5. Flow Chart
+
+![](media/2de2fe866d7d634b4a8dcd0e67cc3ac6.emf)
+
+6. Test Code:
+
+You can upload the code “**code_2.py**”directly from the tutorial (rea he "Development Environment Configuration" file if in doubt).
+
+Code 2:
+
+```python
+from microbit import *
+from keyes_MiniCar import *
+minicar = MiniCar()
+pin12.set_pull(pin12.PULL_UP)
+pin13.set_pull(pin13.PULL_UP)
+sensor_L = 0
+sensor_R = 0
+
+while True:
+    sensor_L = pin13.read_digital()
+    sensor_R = pin12.read_digital()
+    print("sensor_L:", sensor_L)
+    print("sensor_R:", sensor_R)
+    if sensor_L == 1 and sensor_R == 1:
+        minicar.Motor_L(1, 100)
+        minicar.Motor_R(1, 100)
+    elif sensor_L == 0 and sensor_R == 1:
+        minicar.Motor_L(1, 100)
+        minicar.Motor_R(0, 100)
+    elif sensor_L == 1 and sensor_R == 0:
+        minicar.Motor_L(0, 100)
+        minicar.Motor_R(1, 100)
+    else:
+        minicar.Motor_stop()
+```
+
+
+
+
+
+
+Test Result: Upload the code 2 and open the power switch on the car lace the car on the line tracking paper, then it will follow the blac ine to move.
+
+
+
+
+
+## Project 17: Ultrasonic Following and Obstacl voidance
+
+1. Description
+
+The ultrasonic sensor uses sonar to determine distance to an object lik ats do. It will emit the ultrasonic waves after trigger signals. Whe he ultrasonic waves encounter the object and are reflected back, th odule will output an echo signal, thus, it can determine the distanc f object from the time difference between trigger signal and ech ignal.
+
+As the picture shown, it is like two eyes. One is transmitting end, th ther is receiving end.
+
+In this project, we will learn ultrasonic ranging, ultrasonic followin nd ultrasonic obstacle avoidance.
+
+![](media/69a8202b74cc5e35d712315eab88e95d.png)
+
+2. Specifications
+
+- Working voltage：DC 3.3V-5V
+
+- Working current：50mA－100mA，normally is 65mA
+
+- Maximum power：0.5W
+
+- Maximum detection distance：3m
+
+- Blind spot：less than 4cm
+
+- Sensing angle：less than 15 degrees
+
+- Interface：4-pin interface of a spacing of 2.54mm
+
+- Positioning hole ：3mm diameter
+
+- Working temperature： -10℃ - +60℃
+
+- Dimension：49mm\*22mm\*19mm
+
+- Environmental protection attributes: ROHS
+
+3. Working Principle
+
+![](media/8ff02741199a0f03d8d814a4b72f27d7.png)
+
+(1)Pull down TRIG then trigger high level signals with least 10us;
+
+(2)After triggering, the module will automatically send eight 40KH ltrasonic pulses and detect whether there is a signal return;
+
+(3)If there is a signal return, when ECHO outputs a high level, then th uration of the high level is the time from transmission to reception o he ultrasonic waves. Then test distance = high level duration
+\*340m/s\*0.5. 
+
+4. Preparation
+
+（1）Insert the micro: bit correctly into the expansion board
+
+（2）Connect the battery holder to the expansion board
+
+（3）Turn on the power switch（Slide the POWER switch to ON end）
+
+（4）Connect the micro：bit and computer via a micro USB cable
+
+（5）Open the Web version of Makecode
+
+(6 ) Install the ultrasonic to the expansion board
+
+If you want to add the Mini car extension library(you can refer to the
+"1. Development environment configuration "file).
+
+5. Code for Ultrasonic Ranging
+
+Upload the“code-1.py” file directly from the tutorial
+
+Code 1:
+
+```python
+from microbit import *
+from keyes_MiniCar import *
+minicar = MiniCar()
+distance = 0
+
+while True:
+    distance = minicar.get_distance()
+    print("distance:", distance)
+    sleep(1000)
+```
+
+After downloading code, keep USB cable connected, click**“REPL”butto nd press the reset button.** REPL window shows the distance valu etween the ultrasonic sensor and the obstacle(as shown below):
+
+![](media/bb1e5f6e5e89e78e029c50076eadd158.png)
+
+6. Flow Chart of Ultrasonic Following
+
+![](media/4c18ff1fdb724fd8e136d36fe6c042b6.emf)
+
+7. Code for Ultrasonic Following
+
+Upload the“code-2.py” file directly from the tutorial
+
+Code 2:
+
+```python
+from microbit import *
+from keyes_MiniCar import *
+minicar = MiniCar()
+
+while True:
+    distance = 0
+    distance = minicar.get_distance()
+    if distance >= 10 and distance <= 30:
+        minicar.Motor_L(1, 100)
+        minicar.Motor_R(1, 100)
+        sleep(50)
+    elif distance <= 6:
+        minicar.Motor_L(0, 100)
+        minicar.Motor_R(0, 100)
+        sleep(50)
+    elif (distance > 6 and distance < 10) or distance > 30:
+        minicar.Motor_stop()
+        sleep(50)
+```
+
+
+
+
+
+Test Result:Upload the code and open the power switch on the car. I here is an obstacle in the place larger than 10cm and less than 30cm i ront of the car, the car moves forward, if the obstacle appears withi cm, the car will back up, and it stops when it is greater than 6cm an ess than 10cm or greater than 30cm.
+
+8. Flow Chart of Ultrasonic Obstacl voidance
+
+![](media/2661bdcffda501583ad3f21afce442b6.emf)
+
+9. Code for Ultrasonic Obstacle Avoidance
+
+Upload the“code-3.py” file directly from the tutorial
+
+Code 3:
+
+```python
+from microbit import *
+from keyes_MiniCar import *
+minicar = MiniCar()
+
+while True:
+    distance = 0
+    distance = minicar.get_distance()
+    if distance > 10:
+        minicar.Motor_L(1, 70)
+        minicar.Motor_R(1, 70)
+        sleep(50)
+    else:
+        minicar.Motor_L(0, 70)
+        minicar.Motor_R(1, 70)
+        sleep(50)
+```
+
+
+
+
+
+Test Result: Upload the code and open the power switch on the car. I he distance is larger than 10cm, the car will go forward, if withi 0cm, it will turn left.
+
+
+
+
+

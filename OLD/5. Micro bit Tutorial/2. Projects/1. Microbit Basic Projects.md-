@@ -1,0 +1,1540 @@
+# Microbit Basic Projects
+
+## Project 1: Heartbeat
+
+1. Description
+
+The sensor modules and LED dot matrix of the Microbit basic projec omes with the micro: bit mainboard.
+
+Prepare a Micro:bit board and a USB cable. Next we will conduct a basi xperiment that a heartbeat pattern flashes on the micro:bit board.
+
+2. Components Needed
+
+<table>
+<colgroup>
+<col style="width: 32%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>
+
+![](media/35c29c989e9d8c6c45aeb31a493efdb1.png)
+
+</td>
+<td>
+
+![](media/81bfee2741c94f7e5cb7f8ec66b83945.jpg)
+
+</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Micro:bit * 1</td>
+<td>USB Cable * 1</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+3. Test Code
+
+You can upload the code directly from the tutorial (read th Development Environment Configuration" file if in doubt).
+
+Or add the code blocks manually:
+
+1)  Go to“Basic”→“show icon”.
+
+2)  Copy it again and place into“forever”block.
+
+3)  Click“![](media/956fa1d262cebf7656f8ab8a6dd7e5e8.png)”t    select“![](media/3765302c4b97e093d22085d02de6cbb8.png)”.
+
+![](media/ff41bc3df76e580ea51abb79c9f56ba7.png)
+
+Complete Program：
+
+![](media/956fa1d262cebf7656f8ab8a6dd7e5e8.png)![](media/3765302c4b97e093d22085d02de6cbb8.png)
+
+![](media/ff41bc3df76e580ea51abb79c9f56ba7.png)
+
+Click“JavaScript" to view the corresponding JavaScript code:
+
+![](media/32e69bb2fc03fc9fcdb472db5798b2a2.png)
+
+4. Test Result
+
+Download code to the micro:bit and plug in it via a USB cable. The LE ot matrix will display
+![](media/14472c7e1c80818889bb47bfc709f053.png) and
+![](media/04fdfc9060943954e7938bb1a741d626.png).
+
+If download unsuccessfully, disconnect the micro:bit and reboot it
+
+![](media/172827cdf8056b4ecc7692467ca5a751.png)![](media/5a5c8c2e3e1adb106905863f7da68f78.png)
+
+
+
+
+
+## Project 2 Light Up A Single LED
+
+1. Description
+
+Micro:bit motherboard consists of 25 light-emitting diodes, 5 pcs in  roup, which correspond to x and y axis, forging a 5\*5 matrix oreover, every diode locates at the point of x and y axis.
+
+Virtually, we could control an LED by setting coordinate points. Fo nstance, set coordinate point（0，0）to turn on the LED at row 1 an olumn 1; light up LED at the row 1 and column 3, we could set （2，0 nd so on.
+
+![](media/a44f7625e2b1d61819bfc1985c321796.png)
+
+2. Components Needed
+
+<table>
+<colgroup>
+<col style="width: 32%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>
+
+![](media/35c29c989e9d8c6c45aeb31a493efdb1.png)
+
+</td>
+<td>
+
+![](media/81bfee2741c94f7e5cb7f8ec66b83945.jpg)
+
+</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Micro:bit * 1</td>
+<td>USB Cable * 1</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+3. Test Code
+
+You can upload the code directly from the tutorial (read th Development Environment Configuration" file if in doubt).
+
+Or add the code blocks manually:
+
+1)  A. Click“Led”→“more”→“led enable false”
+
+B. Put it into the“on start”block, click the drop-down triangle butto  elect“true”.![](media/976aaaf61e578c48e2f00f6d2a3fccc0.png)
+
+\(2\) A. Enter“Led”→“toggle x 0 y 0”block;
+
+B. Combine it with“forever”，alter“x 0”to“x 1”.
+
+![](media/70e6ac6cc25d9f0f313c670383c718dd.png)
+
+\(3\) A. Enter“Basic”→“pause (ms) 100”from“
+
+B. Then move it below the“toggle x1 y0”block, and set the delay time t 00ms.![](media/b3cf902a00a442590d9e81b3d963b856.png)
+
+\(4\) Duplicate cod tring![](media/a19713fcfe99bbdc3b7d2448e42d3b47.png)onc nd place it into“forever”block.
+
+![](media/6fa24a7c1348d775f70f3c3e65294091.png)
+
+\(5\) A. Enter“Led”→“plot x 0 y 0”
+
+B. Keep it beneath block“pause(ms)500”, then set to“plot x 3 y 4”.
+
+![](media/2d573bedbe650cae075dea31bfd509a4.png)
+
+\(6\) Replicate“pause (ms) 500”once and keep it below the block“plo 3y4”
+
+![](media/14aa140cf450499f11035dc8313bd83c.png)
+
+Click“Led”→“unplot x 0 y 0”and set to“unplot x3 y 4”;
+
+Lay down it beneath“pause (ms) 500”block
+
+Copy“pause (ms) 500”block once, and keep it below the“unplot x3 y  lock.
+
+![](media/523b04d16b1e2755b488b05a82c6da71.png)
+
+Complete Program：
+
+![](media/cfd2099318bfdf76c818e66b192b4319.png)
+
+4. Test Result
+
+Upload program and plug in micro:bit via USB port, the LED at coordinat oint (1,0) flashes for 0.5s, then the LED at (3,4）blinks for 0.5s lternately.
+
+![](media/02bc184f70538ce97db32d52f89080ac.png)![](media/d81896e508324f8daf32dbdfe1de20b6.png)
+
+
+
+
+
+## Project 3: 5 x 5 LED Dot Matrix
+
+1. Description
+
+Dot matrix gains popularity in our life, such as LED screen, bus statio nd the mini TV in the lift.
+
+The dot matrix of Micro:bit board consists of 25 light emitting diodes n previous lesson, we control LED of Micro:bit board to form patterns umbers and character strings by setting the coordinate points oreover, we could adopt another way to complete the display o atterns, numbers and character strings.
+
+2. Components Needed
+
+<table>
+<colgroup>
+<col style="width: 32%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>
+
+![](media/35c29c989e9d8c6c45aeb31a493efdb1.png)
+
+</td>
+<td>
+
+![](media/81bfee2741c94f7e5cb7f8ec66b83945.jpg)
+
+</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Micro:bit * 1</td>
+<td>USB Cable * 1</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+3. Test Code
+
+You can upload the code directly from the tutorial (read th Development Environment Configuration" file if in doubt).
+
+Or add the code blocks manually:
+
+Code 1：
+
+Enter“Led”→“more”→“led enable false”
+
+Put it into the“on start”block
+
+Click the drop-down triangle button to select“true”
+
+![](media/976aaaf61e578c48e2f00f6d2a3fccc0.png)
+
+Click“Led”to move“plot x 0 y 0”into“forever”, then replicate“plot x 0  ”for 8 times, respectively set to“x 2”y 0”,“ ”y 1”,“x 2”y 2”,“x 2”y 3”,“x 2”y 4”,“x 1”y 3”“x 0”y 2”,“x 3”y 3”,“x 4” ”.
+
+![](media/d44a44c5708aa9ea67a70220d3afde02.png)
+
+Complete Program：
+
+<table>
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>
+
+![](media/d44a44c5708aa9ea67a70220d3afde02.png)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+
+
+Code 2：
+
+1)  A. Enter“Basic”→“show number 0”block,
+
+<!-- -->
+
+2.  Duplicate it for 4 times, then separately set to“show numbe    1”,“show number 2”,“show number 3”,“show number 4”,“show number 5”.
+
+![](media/5b8bc5bbc3f5e84aeb19d4dc7d7d2ffd.png)
+
+2)  Click“Basic”→“show leds”, then put it into“on start”block，tick blu    boxes to light LED and generate“↓”pattern.
+
+![](media/9c1ecc0a6db98f37533c9deec935b717.png)
+
+3)  Move out the block“show string” from“Basic”block, and leave i    beneath the“show leds” block
+
+![](media/3f638ac0f3f088a2adefa1ad17cea38a.png)
+
+Choose“show icon” from“Basic”block, and leave it beneath the block“sho tring“Hello!”block
+
+![](media/e989a69cc6fea0a3faa6c1f491b40e69.png)
+
+Enter“Basic”→“show arrow North”;
+
+Leave it into“forever”block，replicate“show arrow North”for  imes，respectively set to“<span class="mark">North East”, “South East”,
+“South West”,“North West”.</span>
+
+![](media/008c4281fabc99c159c52fcf4ab28bf2.png)
+
+Click“Basic”to get block“clear screen”the emain it below the block “show arrow North West”
+
+Drag“pause (ms) 100”block from“Basic”block and set to 500ms, then leav t below“clear screen”block.
+
+![](media/e782704754471e5db06937017e5022d0.png)
+
+Complete Program:
+
+<table>
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>
+
+![](media/20fed03d66e92ef565333d6f060b1267.png)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+4. Test Result
+
+Upload code 1 and plug in micro:bit via USB cable , we will see the
+![](media/d4e278da768e447ed344d581e671f57a.png)
+icon.
+
+Upload code 2 and plug in micro:bit via USB cable. Micro: bit start howing number 1, 2, 3, 4, and 5, then cyclicall isplay![](media/d4e278da768e447ed344d581e671f57a.png),“Hello!”,
+![](media/66b31365d42274ef94ce9a3fcea1cd6c.png),
+![](media/39fe4029acb5fb675d875c58e382d148.png),
+![](media/45fcde65eb80a942d3903e400a346587.png),
+![](media/9e34fdb19d72918bde242994a3c94c1f.png) and
+![](media/2a45fca9d836ce38674c347c70c81e02.png)patterns.
+
+
+
+
+
+## Project 4：Programmable Buttons
+
+1. Description
+
+The button can control the on and off of the circuit, which is attache o the circuit. The circuit is disconnected when the button is no ressed. The circuit is connected as soon as it is pressed, but it i isconnected after being released.
+
+Both ends of button are like two mountains. There is a river in between.
+
+The internal metal piece connect the two sides to let the current pass ust like building a bridge to connect the two mountains.
+
+![](media/2ff75a1d81bfe0228b83931a0b7cc860.png)
+![](media/d2a204e61c768f18924150db58aee093.png)
+
+-   （Internal Structure）
+
+Working Principle：Before pressing the button, 1, 2 , 3 and 4 ar witched on, but 1, 3 or 1, 4 or 2, 3 or 2, 4 is disconnected (blocked) hich will be on when the button is pressed.
+
+Micro:bit board has three buttons, the reset button is on the back an wo programmable buttons are on the front. Press A, B and AB at the sam ime respectively, and the corresponding screen displays the espectively.
+
+2. Components Needed
+
+<table>
+<colgroup>
+<col style="width: 32%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>
+
+![](media/35c29c989e9d8c6c45aeb31a493efdb1.png)
+
+</td>
+<td>
+
+![](media/81bfee2741c94f7e5cb7f8ec66b83945.jpg)
+
+</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Micro:bit * 1</td>
+<td>USB Cable * 1</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+3. Test Code
+
+You can upload the code directly from the tutorial (read th Development Environment Configuration" file if in doubt).
+
+Or add the code blocks manually:
+
+Code 1：
+
+1)  A. Click“Basic”→“show string”;
+
+B. Then place it into“on button A pressed”block, change“Hello!”into“A”.
+![](media/aebeefcca33e544db91944881f0a9a68.png)
+
+2)  Copy cod    string![](media/aebeefcca33e544db91944881f0a9a68.png)    tap the drop-down button“A”to select“B”and modify character“A”to“B”.
+
+![](media/6c6bcb6bbeaf8ed55b985e44fc734d61.png)
+
+3)  Copy![](media/aebeefcca33e544db91944881f0a9a68.png)once，an    set to“on button A+B pressed”and“show string“AB”
+
+![](media/3e8bde170db9e02e9cee36b3ede184b7.png)
+
+Complete Code:
+
+<table>
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>
+
+![](media/1ad59546b238e9644160019cdb102ee4.png)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+Code 2：
+
+1)  A. Click“Led”→“more”→“led enable false”,
+
+B. Put it into the block“on start”，click drop-down triangle button t elect“true”
+
+![](media/976aaaf61e578c48e2f00f6d2a3fccc0.png).
+
+2)  A. Click“Input”→“on button A pressed”.
+
+B. Go to“Variables”→“ change item by 1 ”
+
+C. Place it into“on button A pressed”and 1 is modified into
+![](media/81ec128a3a4bb86fed7d2f78bab20447.png)
+
+3)  Duplicate![](media/81ec128a3a4bb86fed7d2f78bab20447.png)cod    string once，click the drop-down button to select“B”，the    set“change item by -5”    ![](media/a53f0e6deb299ba15c494547dec19259.png)
+
+4)  A. Enter“Led”→“plot bar graph of 0 up to 0”
+
+B. Keep it into“forever”block
+
+C. Go to“Variables”to move“item”into 0 box，change 0 into 25.
+
+![](media/3232608700bf086dd0474de156a9116d.png)
+
+5)  A. Go to“Logic”to move out “if...true...then...”and “=”blocks，
+
+B. Keep“=”into“true”box and set to “\>”
+
+C. Select“item”in the“Variables”and lay it down at left box of
+“\>”，change 0 into 25；
+
+D. Enter“Variables”to drag“set item to 0”block into“if...true..then...” lter 0 into 25.
+
+![](media/75a22c2c7eaf03a6d0ffaadf1d9f2fe9.png)
+
+6)  A. Replicate cod    string![](media/e0de4c7488b48605b292df5d3dd798dc.png)once
+
+B.“\>”is modified into“\<”and 25 is changed into 0.
+
+C. Leave it beneath
+![](media/e0de4c7488b48605b292df5d3dd798dc.png)cod tring.
+
+![](media/678059d480a41d372a6b70175b5a3225.png)
+
+Complete Program：
+
+<table>
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>
+
+![](media/e2d7143ce59218e14780e9370d973c51.png)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+4. Test Result
+
+Upload code 1 and plug in micro:bit via USB cable, press“A”on Micro:bi oard, character“A”will be displayed；in case that B i ressed，letter“B”will appear.“AB”will be displayed if you press A and  uttons simultaneously.
+
+Upload code 2 and plug in board via USB cable. Press button A, th umber of rows lit by the LED dot matrix will increase, when B i ressed, the number of rows lit by the LED dot matrix will decrease.
+
+
+
+
+
+## Project 5: Temperature Measurement
+
+1. Description
+
+Micro:bit main board doesn’t come with temperature sensor actually, bu etect temperature through built-in temperature of NFR51822 chip hereby, the detected temperature is more close to chip’s temperature.
+
+In this project, we will use the sensor to test the temperature in th urrent environment, and display the test results in the display dat equipment), then set the temperature range detected by the sensor in  ay that controls the LED dot matrix to display different patterns.
+
+![](media/206c8ec1c3f11d2de8d0f42fdf5b6b47.png)
+
+（Temperature Sensor**）**
+
+2. Components Needed
+
+<table>
+<colgroup>
+<col style="width: 32%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>
+
+![](media/35c29c989e9d8c6c45aeb31a493efdb1.png)
+
+</td>
+<td>
+
+![](media/81bfee2741c94f7e5cb7f8ec66b83945.jpg)
+
+</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Micro:bit * 1</td>
+<td>USB Cable * 1</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+3. Test Code
+
+You can upload the code directly from the tutorial (read th Development Environment Configuration" file if in doubt).
+
+Or add the code blocks manually:
+
+Code 1：
+
+1)  Go to“Advanced” →“Serial” →“serial redirect to USB”.
+
+Place it into “on start”
+
+![](media/07637ee0425802f6a59eb6f6dd62ea5c.png)
+
+2)  Click“Serial”to drag out“serial write value x=0”.
+
+Move it into“forever”block
+
+![](media/0e709be8f6acc9521f1f76a0fc32c792.png)
+
+3)  Go to“Input” →“temperature(℃)”
+
+Place it into 0 box
+
+Change x into Temperature
+
+![](media/2143a993b073f763a2e770a7eea628d6.png)
+
+4)  Move “pause (ms) 100”from“Basic” block and place it unde    block“serial write.....temperature(℃)”
+
+![](media/0c03bc986e186751ac33b92e5052b26f.png)
+
+Complete Program：
+
+<table>
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>
+
+![](media/e1e316ab2c9727c9b5a36dd82a7ab11a.png)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+Download code 1 to micro:bit board and keep USB cable connected, the ap button
+![](media/e0580d7886af95d2a4ea7cd9d40759ff.png):
+
+![](media/0d3198e0cb5460c9820bc2f016c0d7c1.png)
+
+Temperature data is shown below:
+
+![](media/6177222069a9583f2d8314d592fdb916.png)
+
+Through the test, the room temperature is 35℃ when touching the NFR5182 hip of micro:bit; however, the temperature rises to 37℃ when it touche ater cup.
+
+If you don't have a Windows 10 computer, then Google Chrome can't pai evices to read digital or analog signals. Here you can use CoolTer oftware to read the serial port.
+
+Open CoolTerm, click Options to select SerialPort. Set COM port an 15200 baud rate(the baud rate of USB serial communication of Micro:bi s 115200 through the test). Click“OK”and“Connect”.
+
+The serial monitor shows the current ambient temperature value, as show elow:
+
+<img src="media/b3a18bca1b2a7b5337470735e5a0c5aa.png" style="width:4.33697in;height:3.31767in"
+alt="无标题" />
+
+<img src="media/f78128c148de3862a3fe10d86f063e22.png" style="width:5.45459in;height:7.09294in"
+alt="无标题" />
+
+![](media/eb105b8b2f9c1868b586573230718e07.png)
+
+Code 2：
+
+Click“Led”→“more”→“led enable false”into“on start”，click drop-dow riangle button to select“true”
+![](media/976aaaf61e578c48e2f00f6d2a3fccc0.png)
+
+Go to“Logic”→“if..true...then...else”and “=” block;
+
+Move“if..true...then...else” into“forever”block，the lace“=”into“true”box.
+
+![](media/28c4cf38fbacb05ca0e457146767757d.png)
+
+Change “=” to“≥”
+
+Go to“Input”→“temperature(℃)”and move it into the left 0 box;
+
+Change 0 into 35.
+
+![](media/2b0e3775540415849bf36f7d118a8599.png)
+
+Tap“Basic”→“show icon”，copy it once and lay down them under the“i ..then” and else blocks, then click the drop-down triangle button t elect“![](media/9fa58029eb504582ee5a915f591ea583.png)”.
+
+![](media/fee3bbacccaebb856bbf2cbbe95a82bf.png)
+
+Complete Program：
+
+<table>
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>
+
+![](media/9fa58029eb504582ee5a915f591ea583.png)![](media/75b4f8dfc29b2a45e718383972ff0dc4.png)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+4. Test Result
+
+Upload the code 2 plug in micro:bit via USB cable, when the ambien emperature is less than 35℃, the 5\*5 LED wil how![](media/4b1765e12b413dc5d562f2a16d32392f.png) hen the temperature is equivalent to or greater than 35℃, th attern![](media/f2705fbc4886efcfaac96589ca255f66.png)
+will appear.
+
+
+
+
+
+## Project 6: Compass
+
+1. Description
+
+This project mainly introduces the use of the Micro:bit’s compass. I an be used to determine the direction. We need to calibrate th icro:bit board when magnetic sensor works. The correct calibratio ethod is to rotate the Micro:bit board.
+
+In addition, the objects nearby may affect the accuracy of readings an alibration.
+
+![](media/68b3f54592553e620f6d39f30f90feb9.png)
+
+(Compass)
+
+2. Components Needed
+
+<table>
+<colgroup>
+<col style="width: 32%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>
+
+![](media/35c29c989e9d8c6c45aeb31a493efdb1.png)
+
+</td>
+<td>
+
+![](media/81bfee2741c94f7e5cb7f8ec66b83945.jpg)
+
+</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Micro:bit * 1</td>
+<td>USB Cable * 1</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+3. Test Code
+
+You can upload the code directly from the tutorial (read th Development Environment Configuration" file if in doubt).
+
+Or add the code blocks manually:
+
+Code 1：
+
+1)  A. Click“Input”→“more”→“calibrate compass”
+
+B. Lay down it into the“on start”block.
+
+![](media/f0973c3116eb4faf2d4ca138bd057d45.png)
+
+2)  A. Go to“Input”→“on button A pressed”.
+
+B. Enter“Basic”→“show number”, put it into“on button A pressed”block;
+
+C. Tap“Input”→“compass heading(℃)”， and place it into“show number”
+
+![](media/0d9b5a65740d9406848d9a360635982b.png)
+
+![](media/3dac0d4c18fe1334cb76de8a87bf150c.png)Complet rogram：
+
+<table>
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>
+
+![](media/3dac0d4c18fe1334cb76de8a87bf150c.png)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+Program Description：
+
+Upload the code 1, plug in micro:bit via USB cable and press button A ED dot matrix indicates that“TILT TO FILL SCREEN”. Then enter th alibration interface, the calibration method is: rotate the Micro:bi otherboard to make the screen (LED dot matrix) draw a square (25 LED re on), as shown in the following figure:
+
+![](media/72d895c17cbaf3ecf7735f93128e140e.jpg)
+
+The calibration is finished until you view the smil attern![](media/a4faf86fb027b2f4c3dacaeee5d47d2b.png).
+
+The serial monitor show will 0°, 90°, 180°and 270° when pressing A.
+
+Code 2：
+
+Make micro: bit board point to the north, south, east and wes orizontally , LED dot matrix displays the corresponding directio atterns.
+
+![](media/66c4482e3bcd71e712a54f4d73044104.png)
+
+This code string complies that we read the value detected incessantl nd determine the direction by the value range. The direction is towar orth at this time.
+
+![](media/d1a4e9f62bdf690ba809ae35c347b233.png)
+
+As shown in the figure, if the reading is between 292.5 and 337.5, the ake the display show an arrow pointing to the top right. Since 0. annot be entered in the program, the values are 293 and 338. Then ad ther logical criteria, and you will get the complete program.
+
+Find the instruction blocks:
+
+Enter“Input”→ “more”→“calibrate compass”
+
+Move“calibrate compass”into“on start”
+
+![](media/f0973c3116eb4faf2d4ca138bd057d45.png)
+
+Click “Variables”→“Make a Variable...”→“New variable name：”
+
+Input“x”in the blank box and click“OK”, and the variable “x” i enerated.
+
+Drag out“set x to”into“forever”block.
+
+![](media/0ecd067449d3d52ce3ba751632129b54.png)
+
+Go to“Input”→“compass heading(℃)”, and keep it into “0” box
+
+![](media/a97f7ff675fc62533a9053b6c415652b.png)
+
+Tap“Logic”→“if...then...else”, leave it below block“sex x to compas eading”，the lick![](media/bf972b006ad6d05686352c4785e54994.png)ico or 6 times.
+
+Place“and”into “true” block
+
+Then move“=”block to the left box of “and”
+
+Click“Variables”to drag“x”to the left“0”box, change 0 into 293 and se o“≥”;
+
+Then copy“x≥293”once and leave it to the right“0”box and set to“x\<338”
+
+![](media/cf2d8d1d74b5f485abd4843f92b52672.png)
+
+Go to“Basic”→“show leds”
+
+Lay it down beneath
+![](media/6dbd99f5a6e4abe8ffd450d19b8a857b.png)block hen
+
+click“show leds”and the pattern
+![](media/eab025b80ef24f1d5351bd3e06221bad.png)appears.
+
+![](media/fe40fd39ae6abce0721d19cf86ef136d.png)
+
+Duplicate
+![](media/6dbd99f5a6e4abe8ffd450d19b8a857b.png)for  imes.
+
+Separately leave them into the blank boxes behind“else if”.
+
+Set to“x≥23 and x\<68 ”,“x≥68 and x\<113 ”,“x≥113 and x\<158 ”,“x≥15 nd x\<203 ”,“x≥203 and x\<248 ”,“x≥248 and x\<293 ”respectively.
+
+Then copy“show leds”for 7 times and keep them below the “els f.......then” block respectively.
+
+Click the blue boxes to form th attern“![](media/4c73992fa4dfc6a2735b49ea8f000ed6.png)”,
+“![](media/0771b8fd797a3e945a01ec1525ba4a9d.png)”,
+“![](media/41eb716a282d52483e8467704613d034.png)”,
+“![](media/2cae18294b329c10ecdefd768d6954e0.png)”,
+“![](media/14b893d1a7157d72209b975d0df8d890.png)”,
+“![](media/c362406f55115926523a0f60e16828b6.png)”and
+“![](media/3977e13fdec2bfbc7fc55f5dce4969a9.png)”.
+
+Complet rogram：![](media/ca4bc854081faf63bb13b2db448fa284.png)
+
+![](media/5e3330d735a144c4a6461ece221db219.png)
+
+![](media/99ec247ce0be9850c92e8fdfc1fc5d63.png)
+
+![](media/2ca9ab458e80a2c3ec7002c15b74235e.png)
+
+4. Test Result
+
+Upload code 2 and keep USB cable connected. After calibration, til icro:bit board, the LED dot matrix displays the direction signs.
+
+
+
+
+
+## Project 7: Accelerometer
+
+1. Description
+
+The Micro:bit board has a built-in LSM303AGR acceleration senso accelerometer). It has a resolution of 8,10 and 12 bits, and th rogram sets the measuring range to 1g, 2g, 4g, and 8g.
+
+We often use the accelerometer to detect the attitude of machines.
+
+In this project, we will introduce the detection of several specia ostures by the accelerometer, then view the triaxial raw data output b he it.
+
+2. Components Needed
+
+<table>
+<colgroup>
+<col style="width: 32%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>
+
+![](media/35c29c989e9d8c6c45aeb31a493efdb1.png)
+
+</td>
+<td>
+
+![](media/81bfee2741c94f7e5cb7f8ec66b83945.jpg)
+
+</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Micro:bit * 1</td>
+<td>USB Cable * 1</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+3. Test Code
+
+You can upload the code directly from the tutorial (read th Development Environment Configuration" file if in doubt).
+
+Or add the code blocks manually:
+
+Code 1：
+
+\(1\) A. Enter“Input”→“on shake”，
+
+B. Click“Basic”→“show number”, place it into“on shake”block, then chang  into 1.
+
+![](media/b86b68744e64e4e9907ccb1fa0cb2af7.png)
+
+\(2\) A. Copy code string
+![](media/b86b68744e64e4e9907ccb1fa0cb2af7.png)for  imes;
+
+2.  separately click the triangle button to select“logo up”,“log    down”,“screen up”,“screen down”,“tilt left”,“tilt right”and“fre    fall”, then respectively change 1 into 2, 3, 4, 5, 6, 7, 8.
+
+Complete Program：
+
+<table>
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>
+
+![](media/75e625fbae54fd3d76cf6c4967d87415.png)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<table>
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>
+
+![](media/3fc45754cb7a060d660212c5cb8c268f.png)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+Code 2：
+
+Check the acceleration value at X, Y and Z axis.
+
+1)  A. Go to“Advanced”→“Serial”→“serial redirect to USB”
+
+B. Drag it into“on start”
+
+![](media/8c0cfdd76322ebf7febafa519e98b76f.png)
+
+2)  A. Enter“Serial”→“serial write value x =0”
+
+B. Leave it into“forever”block
+
+![](media/1dcff6f8c61c0c7ac220ded584bcf988.png)
+
+3)  A. Click“Input”→“acceleration(mg) x”；
+
+B. Keep it into“0”box and capitalize the“x”
+
+![](media/3f132064ad2081eabf6269eb4c0e698b.png)
+
+4)  Go to“Basic”and move out“pause (ms) 100”below th    block![](media/aa23874d61a27c3af5263746851f6fef.png)    then set to 100ms.
+
+![](media/98c688ae175b0c5eca6bed1d95f7b301.png)
+
+5)  Replicate cod    string![](media/c013533f2e3a02f26116f176ba6f975b.png)
+
+for 3 times and keep them into“forever”block，separately set the whol ode string as follows:
+
+![](media/e11b467aef3999050e8a3b5cd175dce9.png)
+
+Complete Program：
+
+![](media/57fec5e7a6bda76b8ddc6c3538b58010.png)
+
+Download code 1 to micro:bit board, keep USB cable connected an lick![](media/e310a9105faecbe6ed8400101a4e852d.png)
+
+![](media/821a64a53c3a9709ff556e71b070f4dd.png)
+
+The coordinates of the Micro:bit accelerometer are shown in th ollowing figure:
+
+![](media/6303a0ac122680207fe856d9be38d01c.png)
+
+It shows the decomposition of acceleration on the X-axis, Y-axis, an -axis, as well as the synthesis of acceleration (the synthesis o ravitational acceleration and other external forces). Then flip th icro:bit board, the data is shown below:
+
+![](media/ded4e05f2b15d694e2061159628574dc.png)
+
+If you don't have a Windows 10 computer, then Google Chrome can't pai evices to read digital or analog signals. Here you can use CoolTer oftware to read the serial port.
+
+4. Test Result
+
+Download code 1 to micro:bit board and plug in power with USB cable hen shake the Micro:bit board, the number 1 appears.
+
+When the logo is up, the number 2 is displayed:
+
+![](media/1600323e3e61e331c248cbeda5ccdcfc.jpg)
+
+When the logo is down, the number 3 is displayed:
+
+![](media/3be80acf957e53117f695801ce19c449.jpg)
+
+When the screen is up, the number 4 is shown.
+
+![](media/5797dd7be9a9c2d3226123e0c29db0bd.jpg)
+
+On the contrary, the number 5 is displayed when the screen is down.
+
+When Micro:bit board is tilt to the left, number 6 is shown.
+
+![](media/326095934bcff0a925b4f9a09d6cf7d2.jpg)
+
+When Micro:bit board is inclined to the right, number 7 is displayed.
+
+![](media/185b0ac204e9b2c54dd8fa93d852568c.jpg)
+
+When it is free fall, number 8 will appear on dot matrix.（Note：w on’t recommend you to make it free fall, it will cause board damage)
+
+
+
+
+
+## Project 8: Detect Light Intensity
+
+1. Description
+
+This project will introduce how Micro:bit detects the external ligh ntensity. Since Micro:bit doesn’t come with a photosensitive sensor he detection of light intensity is completed through the LED matrix.
+
+The LED matrix is used to sense the surrounding light and repeatedl onverts the LED into input and samples the voltage decay time. Th ight intensity detected is a relative value.
+
+![](media/5bbafad58a34792768c8370e8ee8c2cf.png)
+
+（Light Intensity Area）
+
+2. Components Needed
+
+<table>
+<colgroup>
+<col style="width: 32%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>
+
+![](media/35c29c989e9d8c6c45aeb31a493efdb1.png)
+
+</td>
+<td>
+
+![](media/81bfee2741c94f7e5cb7f8ec66b83945.jpg)
+
+</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Micro:bit * 1</td>
+<td>USB Cable * 1</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+3. Test Code
+
+You can upload the code directly from the tutorial (read th Development Environment Configuration" file if in doubt).
+
+Or add the code blocks manually:
+
+(1)A. Enter“Advanced”→“Serial”→“serial redirect to USB”;
+
+B. Drag it into“o tart”block.![](media/8c0cfdd76322ebf7febafa519e98b76f.png)
+
+\(2\) A. Go to“Serial”→“serial write value x =0”;
+
+B. Move i nto“forever”![](media/1dcff6f8c61c0c7ac220ded584bcf988.png)
+
+3)  A. Click“Input”→“Light level”
+
+B. Put“Light level”in the“0”box and change “x”to“Light intensity”.
+
+![](media/38447eae9d3e190496b9a24baea6cbe7.png)
+
+4)  A. Click“Basic”→“pause (ms) 100”;
+
+B. Lay it down into“forever”and set to 100ms.
+
+![](media/9ba8558c0d520cc80b01080e437ddff5.png)
+
+Complete Program：
+
+![](media/1ae769b6a1d9f6c6a393351c69b10d32.png)
+
+4. Test Result
+
+Download code to micro:bit board don’t plug off USB cable an lick![](media/e310a9105faecbe6ed8400101a4e852d.png)
+
+![](media/04b472326485cf676cdb4dd61ca6ef1a.png)
+
+The intensity value is 0 when covering the LED dot matrix. And it varie ith the light intensity when placing micro:bit board under th unlight. The stronger the light intensity, the larger the light leve ill be.
+
+![](media/d7f1751ea1e6f251376dee5390ed21fa.png)
+
+
+
+
+
+
+
+## Project 9: Speaker
+
+1. Description
+
+The micro:bit motherboard has a built-in speaker, which makes it ver asy to add a sound to your project. The speaker can be programmed t mit a variety of tones, such as writing a song: Ode to Joy, and pla t.
+
+![](media/ac515b9ae8891dc32f368a29f194a2fb.png)
+
+（ Speaker
+）
+
+2. Components Needed
+
+<table>
+<colgroup>
+<col style="width: 32%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>
+
+![](media/35c29c989e9d8c6c45aeb31a493efdb1.png)
+
+</td>
+<td>
+
+![](media/81bfee2741c94f7e5cb7f8ec66b83945.jpg)
+
+</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Micro:bit * 1</td>
+<td>USB Cable * 1</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+3. Test Code
+
+You can upload the code directly from the tutorial (read th Development Environment Configuration" file if in doubt).
+
+Or add the code blocks manually:
+
+Enter“Basic”→show icon, put it to the“on start “block
+
+Click the drop-down triangle to select th ![](media/7f7aa904c35f83b61c7c560ad1e40d2a.png) attern.
+
+![](media/d4bbd4b80d9a83f1a69fc49171c7f497.png)
+
+Tap
+“Music”→![](media/37c1766cfaa4e801cc115e4f29402dc2.png) ut it to the“on start “block
+
+Enter“Basic”→“pause (ms) 100”, then put it to the“forever“block an hange 100 to 1000.
+
+![](media/5c6d70ea12ce16ca3b12330069d41153.png)
+
+Replicate the cod tring![](media/5c6d70ea12ce16ca3b12330069d41153.png)fo  times, then put it to the“forever“block. Click the drop-down triangl o select
+
+”happy, ”hello”and ”yawn”.
+
+![](media/a3695fa08b3998909ef3a0adcb9d12e0.png)
+
+![](media/7f7aa904c35f83b61c7c560ad1e40d2a.png)Complet rogram：
+
+![](media/8f80ccb8df9d1f6421b1eef99e6a35d5.png)
+
+4. Test Result
+
+Upload the program and plug in micro:bit via a USB cable, then th peaker will emit a sound and the LED dot matrix will display a musi ogo pattern.
+
+
+
+
+
+## Project 10:Touch-sensitive Logo
+
+1. Description
+
+If you have a micro:bit mainboard, it makes sense to use a gol ouch-sensitive logo as another input in your project, which is like a xtra button. It uses a capacitive touch sensor that detects smal hanges in electric fields when you press (or touch) it with you inger. When you touch it, you can control the micro:bit board t erform certain functions.
+
+![](media/644695850097c5ade080bb4848b4b481.png)
+
+（Touch-sensitive Region）
+
+2. Components Needed
+
+<table>
+<colgroup>
+<col style="width: 32%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>
+
+![](media/35c29c989e9d8c6c45aeb31a493efdb1.png)
+
+</td>
+<td>
+
+![](media/81bfee2741c94f7e5cb7f8ec66b83945.jpg)
+
+</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Micro:bit * 1</td>
+<td>USB Cable * 1</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+3. Test Code
+
+You can upload the code directly from the tutorial (read th Development Environment Configuration" file if in doubt).
+
+Or add the code blocks manually:
+
+1.  Delete the“on start”and “forever”blocks
+
+2.  Enter“Input”→ “when logo is touched”, then click the drop dow    triangle button to select “is touched”
+
+![](media/1b4d6c1f508ebff66188e89b271c5bf3.png)
+
+3.  Click “Variables”→“Make a Variable”, then enter start in the dialo    box and tap OK to create the variable "start".
+
+Drag the“ set the variable to 0” block from the Variable bar, then pu t to the“when logo is touched” block.
+
+![](media/62ddd23b7e85eb8bfa681319ea7629f4.png)
+
+（4）Enter“Input”→ “more”→ ”[running time](javascript:;)(ms)”, then pu t into the number 0 of the “ set the variable to 0” block.
+
+![](media/7b284c6b49911611de6d113a805ec4af.png)
+
+（5）Tap “Basic”→ “show icon❤”, then put it into the “when logo i ouched”block.
+
+![](media/b25818cde15c99d501c5a97d660dfb79.png)
+
+\(7\) Enter“Input”→ “when logo is touched”→”is released“, then creat he variable“time”in the same way.
+
+Click “Variables”→“ set time to 0”and put it into the “when logo i eleased”block.
+
+Go to “Math”→“0-0”, then put it into the number 0 of the “ set the tim o 0” block.
+
+![](media/03e92d005486d15983383aaee012c0eb.png)
+
+7)  Enter“Input”→ “more”→”[running time](javascript:;)(ms)”, then put i    into the number 0 box on the left side of the “0-0” block.
+
+Click “Variables”→“start”, then put it into the number 0 box on th ight side of the “0-0” block.
+
+![](media/517211f12456f856cd1ddac264953a3a.png)
+
+8)  Tap “Basic”→ “show number”, then put it into the“when logo i    released”block.
+
+Go to “Math”→ “square root 0”, and put it into the 0 box, then click th rop-down triangle button to select the integer ÷.
+
+![](media/8ed4e29f20103ecded03dbd3738c9818.png)
+
+9)  Click “Variables”→“time”, then put it into the 0 box on the righ    side, and change 0 to1000.
+
+![](media/917e527cfca9b078e50d427a993ea7a2.png)
+
+Complete Program：
+
+![](media/548fe7463f2f053e9034c81668ebccae.png)
+
+4. Test Result
+
+Upload the program and plug in micro:bit via a USB cable. Press and hol he "Logo" sign on the mainboard of the micro:bit, then the LED do atrix displays the ❤ pattern, however, numbers will appear at th Logo" sign when we release it.
+
+
+
+
+
+## Project 11: Microphone
+
+1. Description
+
+The micro:bit motherboard boasts a built-in microphone, which can b sed to measure the ambient sound level. When you clap, the LE ndicator on the micro:bit motherboard will turn on. It can measure th ntensity of sound. In this connection, you can make a sound level char r disco lights that are in tune with the music.
+
+![](media/3073a8af772ab91ecf264843b37d3b74.png)
+![](media/7f0741158e734ff8449d5b87d5ba85f4.png)
+
+（Sound input hole of microphone）（Microphone）
+
+2. Components Needed
+
+<table>
+<colgroup>
+<col style="width: 32%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>
+
+![](media/35c29c989e9d8c6c45aeb31a493efdb1.png)
+
+</td>
+<td>
+
+![](media/81bfee2741c94f7e5cb7f8ec66b83945.jpg)
+
+</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Micro:bit * 1</td>
+<td>USB Cable * 1</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+3. Test Code
+
+You can upload the code directly from the tutorial (read th Development Environment Configuration" file if in doubt).
+
+Or add the code blocks manually:
+
+Code 1:
+
+\(1\) Delete the“on start”and “forever”blocks, then enter“Input”to dra u he![](media/8a85a0d9828272b2b6c3df1f0064eca1.png)
+block.
+
+Tap “Basic”→ “show icon”, then put it into the “on start”block.
+
+![](media/689f013cf67b32a382a3411627595b4c.png)
+
+\(2\) Replicate the cod tring![](media/689f013cf67b32a382a3411627595b4c.png)，the lick the drop-down triangle button behind "loud" to select "quiet" an hen tap the button behind ❤ to select
+![](media/9a40d2f51ed0a372a82e559cdb2ca0dd.png).
+
+![](media/15f18ff78c3bdc76a4cba61e717acdbf.png)
+
+Complete Program：
+
+![](media/04fdfc9060943954e7938bb1a741d626.png)![](media/cbe84fcb1d33793088efc58708102511.png)
+
+Code 2:
+
+1)  Go to“Advanced” →“Serial” →“serial redirect to USB”
+
+Place it into “on start”
+
+![](media/07637ee0425802f6a59eb6f6dd62ea5c.png)
+
+2)  Click “Variables”→“Make a Variable”, then input maxSound in th    dialog box and tap OK.
+
+Tap “Variables”→“set maxSound to 0”, then put it into the “on start”
+
+block.
+
+![](media/39710c93b9b6be8dadebc511f7c361a0.png)
+
+3)  Tap“Logic”→ “if ..then ...else”, then put it into the “forever”
+
+block.
+
+Go to“Input” →“when button A is pressed”, and put it into then.
+
+![](media/4385a22ffd0ee48fa3a7fc8c9587ce41.png)
+
+4)  Click “Basic” →“show number”, and put it behind “if”.
+
+Go to “Variables”→“maxSound”, then put it into number 0.
+
+![](media/fa0490019963f5c77532adce2da388f5.png)
+
+5)  Create the variable“soundLevel”, then drag out the “set soundLeve    to 0”and put it behind “else“.
+
+Go to“Input” →“loudness of sound”, then put it into number 0.
+
+![](media/25a34bce8a8479f11d5c64968690a4b3.png)
+
+6)  Tap“Led”→“plot a bar graph with a value of 0 max 0”, and put i    behind “else“.
+
+Go to “Variables”→“soundLevel”, then put it into 0 behind “the value is
+“, and change the number 0 behind the max to 255.
+
+![](media/b2eb9a18936af27069b533544dde5703.png)
+
+7)  Tap“Logic”→ “if true...then”, and put it behind “else“.
+
+Go to“Logic”→ “0 \> 0”, and put it into “then”.
+
+Click “Variables”→“soundLevel”, then put it into number 0 on the lef ide.
+
+Enter“Variables”→“maxSound”, then put it into number 0 on the righ ide.
+
+![](media/36419531a05b7c9c780a2bd639810a06.png)
+
+8)  Click “Variables”→“ set maxSound to 0”, then put it behind th    second “if”.
+
+Tap“Variables”→“soundLevel”, then put it into number 0 .
+
+![](media/6f42a865ee1d3661b4b92fc4f8d2ae6b.png)
+
+Complete Program：
+
+![](media/3ce899c4ba3a2bd13db1b3164440a6ad.png)
+
+Download code 2 to micro:bit board and keep the USB cable connected hen tap button
+![](media/e0580d7886af95d2a4ea7cd9d40759ff.png):
+
+![](media/e22507af4953df977269bbdb2463d69e.png)
+
+The output data of the serial port will be displayed. When the ambien ound increases, the output sound level of the serial port increases.
+
+![](media/50b81518d9f7925b0c20476ab1f64185.png)
+
+When you press the A button on the micro:bit motherboard, the LED do atrix displays the detected maximum sound level value in th nvironment at this time (Note: reset the maximum value by pressing th eset button on the back of the micro:bit). When applauding, it display he sound level pattern.
+
+4. Test Result
+
+Download code 1 to micro:bit board and keep the USB cable connected hen applauding, the LED dot matrix displays the
+❤ pattern. When the outside world is quiet, i ill display the
+![](media/04fdfc9060943954e7938bb1a741d626.png)
+pattern.
+
+
+
+
+
+## Project 12: Bluetooth Wireles ommunication
+
+1. Description
+
+Micro:bit board boasts a built-in Bluetooth 5.1 low-power BLE and 2.4GH ntenna, which can be used for Bluetooth and 2.4G wireles ommunication.
+
+In this project, we will connect a cellphone or iPad to Micro:bi otherboard to complete the wireless connection.
+
+![](media/55b2424d88ba1ba8a711c49418ca8dc6.png)
+
+）
+
+2. Components Needed
+
+<table>
+<colgroup>
+<col style="width: 32%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>
+
+![](media/35c29c989e9d8c6c45aeb31a493efdb1.png)
+
+</td>
+<td>
+
+![](media/81bfee2741c94f7e5cb7f8ec66b83945.jpg)
+
+</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Micro:bit * 1</td>
+<td>USB Cable * 1</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+  . Test Code
+
+Download link：<https://microbit.org/get-started/user-guide/mobile/>
+（Android can refer to it）
+
+Let's take ios device as an example:
+
+Enter the page：
+
+[https://www.microbit.org/get-started/user-guide/ble-ios/](https://www.microbit.org/get-started/user-guide/ble-ios/)
+，tap“Download pairing HEX file”to download the micro:bit firmware t he folder you created or to your desktop, then burn the downloade irmware into the micro:bit motherboard.
+
+![](media/cfaf7f8ae83cbe2636c39162a78adc7f.png)
+
+![](media/4bcbd2456b3502d254617622b0f8707b.png)
+
+Open ![](media/27924fdb3d67692df7c63d8d0fb72287.png)
+on an iPhone device (phone /iPad), then search“micro:bit”in APP stor nd click
+“![](media/962a57f92b78eea1f0e3e81463497a9c.png)”t nstall the corresponding APP .
+
+![](media/66d1f34d8d4c52e2b7c0ce10e602a063.png)
+
+Pair the Micro:bit motherboard with a cellphone or iPad, then open th luetooth.
+
+After installing APP successfully, click
+![](media/ddfd27bdd24da96eb998ccc2e13fcf72.png)t nter app. Plug in Micro:bit motherboard, click“Choose Micro:bit”t tart Bluetooth pairing.
+
+![](media/34f5fbb1c0c371970d1aec6c59c5cbb5.png)
+
+Click“Pair a new Micro:bit”
+
+![](media/e20270a0ade9c00b61198b26fc2fd83b.png)
+
+Press and hold button A and B, then press and release the reset button ED dot matrix will show a pattern. At last, release the button A and  t same time and click“Next
+
+![](media/c00520400ecd1f20f958c1c6d1a3c907.png)
+![](media/cabc60d7f8a030f5c9d86ac7de6c7bd7.png)
+
+Make the displayed pattern on Micro:bit board as same as the one o Pad, click“Next”.
+
+![](media/9411a5280e6f3b0d45306a31f80c1b38.png)
+
+Click“Next”and “pair “, after a few seconds, the pairing is successfu nd the LED dot matrix on the micro:bit motherboard displays the "√ attern.
+
+![](media/7b56c56e10415ac2881ac69448b4ad3c.png)
+![](media/803cb5cf5f7d595581a11f5e6b7e61ed.png)
+
+
+![](media/dc570950dd81f427edb5ea58f50b3a7e.png)
+![](media/f72e83dc6276d520e82c349659106e1a.png)
+
+After connecting successfully, design code via the APP .
+
+Select“Creat ode”（Click![](media/f4d8d6b0adf0fbc6c098ddf30fe86933.png)and the dialo ox![](media/59567ef7dbca43e8242bc6c6c1f78713.png)will appear ， clic con![](media/5fc22fb58590f911d913ef56a32e8ea1.png)t nter the programming interface.
+
+![](media/d54bf2d1c01cd3c18544009b1f9dc5a0.png)
+
+![](media/f172323d08a303637fc249b41116d226.png)
+
+![](media/81d3e07e2e1a3c34993b1b31dd28429e.png)
+
+![](media/3b349fada94d0b714410c174e4116e1e.png)
+
+Set the code program name to "1", then clic con![](media/a32c2d832ab38d19eb623108143c744e.png)t ave the program.
+
+![](media/a0dc0924b6ef9591b7759d125d325450.png)
+
+Tap“Flash”to enter the upload code program interface. The default cod rogram is the program just saved with the name "1", then click
+“Flash”to upload the code program "1".
+
+![](media/c1661720ea2eaa521ff31a778501eb23.png)
+
+![](media/350abcbb09d431d40427f34c3764f2eb.png)
+![](media/4863bf826f119805a6a9bf9c12d5ec81.png)
+
+If upload the program successfully, as shown below:
+
+The LED dot matrix on the motherboard displays the jumping "heart attern.
+
+![](media/ebfd31347a0553de0be4e01636652a15.png)
+
+
+
+
+

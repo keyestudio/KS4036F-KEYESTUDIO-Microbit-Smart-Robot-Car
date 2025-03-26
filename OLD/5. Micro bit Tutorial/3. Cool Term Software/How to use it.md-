@@ -1,0 +1,37 @@
+# How to use it
+
+If you are running Windows 7 or 8 rather than Windows 10, then you
+cannot pair devices in Google Chrome to read the corresponding digital
+or analog signals, however, the CoolTerm software is accessible for you.
+
+Open CoolTerm →Options→SerialPort，then set the COM port
+
+and baud rate 115200（After testing, the micro:bit USB serial
+
+communication baud rate is 115200）.
+
+Then tap OK and then Connect, the serial monitor of CoolTerm
+
+will display the temperature value in the current environment,
+
+as shown below:
+
+<img src="media/b3a18bca1b2a7b5337470735e5a0c5aa.png" style="width:6.03125in;height:5.59375in"/>
+
+<img src="media/f78128c148de3862a3fe10d86f063e22.png" style="width:6.04167in;height:7.85417in"/>
+
+<img src="media/13238e98c31d620f4ffd7742dd71c78d.png" style="width:6.03125in;height:6.23958in"/>
+
+<span class="mark"></span><img src="media/9c88bb875124738a55e5e0fd5bf957ca.png" style="width:6in;height:5.14583in" />
+
+
+
+
+
+
+
+
+
+
+
+

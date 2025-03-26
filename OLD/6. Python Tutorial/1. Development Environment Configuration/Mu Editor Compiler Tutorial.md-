@@ -1,0 +1,238 @@
+# 1. Install IDE
+
+**Mu**
+
+Official website of
+Mu：[<u>https://codewith.mu/</u>](https://codewith.mu/)
+
+Mu is a Python code editor for beginning programmers based on teachers
+and students. The easiest way to get Mu is through the official
+installer for Windows or Mac OSX (Mu no longer supports 32-bit Windows).
+The current recommended version is Mu 1.0-beta 2.
+
+Step 1- Determine the version and download the Mu installer
+
+Find out if your computer runs Windows or Mac OSX, and open the
+Explorer, click "This PC", then select Properties to know your Windows
+system is 32-bit or 64-bit.
+
+<img src="media/3a58be549e85e640654494c09f3a219f.png" style="width:3.73065in;height:3.93662in" />
+
+View the system type:
+
+<img src="media/e774ae15dcb81968d9a2a553af57ac96.png" style="width:4.85745in;height:2.13053in" />
+
+Open the link：<https://codewith.mu/en/download> to download the
+corresponding Mu software version.
+
+<img src="media/ceb4cfa6c81ce3959cec504412767e39.png" style="width:4.77307in;height:2.29159in" />
+
+Step 2-Run the installer：
+
+Locate the installer you just downloaded (it may be in your download
+folder) and double-click to open the installer file.
+
+<img src="media/8bcfe24cd37e0e5accae1f94cf155640.png" style="width:4.92903in;height:2.27643in"
+/>
+
+Download Link of Mac OSX
+System：[<u>https://codewith.mu/en/howto/1.1/install_macos</u>](https://codewith.mu/en/howto/1.1/install_macos)
+
+<span class="mark">Windows 10 System</span>
+
+Tap“More info”
+
+<img src="media/877beb7b3f5ccf7e5d849b7aaa8d661d.png" style="width:3.36184in;height:3.14941in" />
+
+Enter“Run anyway”
+
+<img src="media/c87475e50dd03a0d0d2dcf166f33a837.png" style="width:3.36894in;height:3.14941in" />
+
+Step 3-Protocol：
+
+Check the license, then click Install.
+
+<img src="media/cc52e57332beae056b2dc9cd7fdd1651.png" style="width:3.26042in;height:2.55917in" />
+
+Step 4-Installation：
+
+It will take a few seconds to install the Mu on your computer.
+
+<img src="media/d75042c926b6e89463ef41c47220cdcc.png" style="width:3.26892in;height:2.55891in" />
+
+Step 5-Finish：
+
+Tap Finish
+
+<img src="media/62abaf11f6dfe7ba9d61b278bb7031b8.png" style="width:3.26233in;height:2.55905in" />
+
+Step 6-Start the Mu：
+
+You can launch Mu by clicking on the icon in the Start menu, or by
+typing Mu in the search box (both methods are shown below).
+
+<img src="media/c4adbdd1b2bf01cee8783ce659ac420f.png" style="width:3.7533in;height:3.40704in" />
+
+The main interface of Mu is shown below:
+
+<img src="media/0da0b5ea4599202e02b009567d5120cf.png" style="width:4.96526in;height:3.14927in" />
+
+2.  **<span class="mark">Install the Driver</span>**
+
+Micro:bit can be used without installing a driver. If your computer can
+not recognize the micro:bit mainboard, then you need to install the
+micro:bit driver. The micro:bit driver file
+<img src="media/d168460fea2398b6685dd3158d06a48a.png" style="width:2.0625in;height:0.20826in" /> and
+the micro:bit driver installation manual are in the folder "Micro:bit
+Driver Download and Installation".
+
+You can install the micro:bit driver by going to the relevant folder and
+following the instructions in the micro:bit driver installation manual.
+Refer to the folder Install Microbit Driver.
+
+<img src="media/6051f8c36455c104140b01d3bf8a3414.png" style="width:2.1875in;height:0.44767in" />
+
+3.  **<span class="mark">Compiler Setup and Toolbar
+    Introduction</span>**
+
+Set“mode”to micro bit first
+
+Open the Mu software, click the Mode button in the menu bar and select
+"BBC micro: bit" , then tap "OK".
+
+<img src="media/ce7538ad76100ce9f54d9f05870ba0ef.png" style="width:6.81855in;height:3.2397in" />
+
+Details about the Mu operation
+page：https://codewith.mu/en/tutorials/1.1/start
+
+More tutorials on using
+Mu：[<u>https://codewith.mu/en/tutorials/</u>](https://codewith.mu/en/tutorials/)
+
+4.  **<span class="mark">Install the Library File</span>**
+
+Before importing the library, you need to upload a.py code to microbit.
+Here we take the RGB module "code_1.py" in the tutorial as an example.
+
+Import“keyes_MiniCar.py“file
+
+The default directory for saving Mu is "Mu_code" file, which is located
+in the root of the user directory.
+
+Reference
+links:[<u>https://codewith.mu/en/tutorials/1.0/files</u>](https://codewith.mu/en/tutorials/1.0/files)
+
+For example, in windows, if your system is installed on the C drive of
+your computer and the user name is Administrator, the path to the
+mu_code directory is C:\Users\Administrator\mu\_ code. On Linux, the
+path is ~/home/mu_code.
+
+**Enter the“mu_code”file**
+
+<img src="media/d271a92404720dbd8cf7c858732b7767.png" style="width:5.71163in;height:2.61263in" />
+
+Replicate "keyes_MiniCar.py" library file to "mu_code" folder. The code
+path is as follows:
+
+<img src="media/65b314c2818896492bf7f9230f41b4a2.png" style="width:4.41163in;height:2.76674in" />
+
+Open the Mu software and connect the micro:bit to your computer, then
+click the "Files" button and drag the "keyes_MiniCar.py" library file
+into the micro:bit.
+
+<img src="media/05e94985c6dca37700142e33943b5df1.png" style="width:6.59293in;height:2.87222in" />
+
+After the import is successful, you will see it in the left box.
+
+<img src="media/433800cc49fc8ed59d77d68f9d0c4119.png" style="width:7.01666in;height:3.08936in" />
+
+Tap “Check”to check the code for errors. If a line appears with a cursor
+or an underscore, there is an error in the program for that line.
+
+<img src="media/405be5815c70f3e29312a56079b68b85.png" style="width:5.68207in;height:3.00977in" />
+
+These tips are just warnings, not code error tips.
+
+<img src="media/863bb61bc88064b6fe7c7cc9621a401e.png" style="width:6.23697in;height:0.19645in" />
+
+<img src="media/ccfbfa562649017dd8ba9a78aa173022.png" style="width:6.60139in;height:0.19667in" />
+
+You also need to make sure that the micro USB cable is connected to the
+micro:bit and the computer, and then click the "Flash" button to
+download the code to the micro:bit.
+
+<img src="media/25c34856f727d4c162d03ff9a615754b.png" style="width:5.92637in;height:2.66174in" />
+
+If there is an error after clicking the "Flash" button, please confirm
+whether you have imported the library file to micro:bit.
+
+Note:
+
+If you have downloaded other programs on the micro:bit board, except the
+"keyes_MiniCar.py" library file. Before programming in Micropython, you
+need to import the library file into the micro: bit.
+
+If you always use the same micro: bit board for Micropython programming,
+you do not need to send the it to the micro: bit again.
+
+5.  **<span class="mark">Add Code to Compiler</span>**
+
+We take the first project of the basic tutorial "Heartbeat" as an
+example, open the "Program" folder in the first project folder and
+locate the file "microbit-Heartbeat.
+
+<img src="media/528306ef33a9ace70c2708ded273a7b8.png" style="width:6.31161in;height:2.63741in" />
+
+<img src="media/59ab5cac1103b6688819290199cd7007.png" style="width:6.38208in;height:3.14908in" />
+
+Or open the Mu software and tap“microbit-Heartbeat.py”file, then drag it
+to the Mu software:
+
+<img src="media/6345d52d1ea149ba26de4f473b15d03a.png" style="width:4.75058in;height:4.7242in"
+/>
+
+as shown below:
+
+<img src="media/163f83acd2b1fffa1cfb7409736ecd48.png" style="width:6.02018in;height:3.14942in"
+/>
+
+6.  **<span class="mark">Download Code to Micro:bit</span>**
+
+Connect the micro：bit board and the computer via the micro USB cable.
+
+Tap “Flash” to download the code to micro：bit.
+
+<img src="media/f00f946e1f194811b1c84725e0eb5d16.png" style="width:1.58611in;height:1.90051in"
+/>
+<span class="mark"></span><img src="media/18c70cf16dcf8c9694a1af8b12530cf9.png" style="width:1.62298in;height:1.69732in"
+/>
+
+<img src="media/fee2f0f238a623c727b7a43418d97948.png" style="width:6.00626in;height:1.78466in" />
+
+If there is an error in code, you can download the code to the micro:
+bit successfully, but it won't work. If sleep is sleeps, click "Flash" ,
+and the code will also be downloaded to micro: bit.
+
+<img src="media/b3617881628ec4860245d42668343769.png" style="width:5.99844in;height:2.43667in" />
+
+After downloading, if the led matrix prompts some error messages, tap
+the "REPL" button, then press the reset button of the micro: bit (not
+the A and B keys) and the error message will be displayed in the REPL
+box as follows:
+
+<img src="media/e4388c58829ba85568d1e054b0c8d233.png" style="width:5.18606in;height:3.14923in" />
+
+Click the“REPL”again, the REPL mode will be turned off, and you can
+refresh the new code. To make sure the code is correct, tap "Check" when
+you are done to check the code for errors, as shown below, then Mu will
+indicate the error in the code.
+
+<img src="media/f8c25d32fdafcfa24d8df86bc63be25f.png" style="width:6.00626in;height:2.94866in" />
+
+Correct the code according to the error prompt. Then click "Check" again
+and Mu shows no problem on the bar below:
+
+<img src="media/448a50c26bc943e863e0cbf00f2e5677.png" style="width:6.00626in;height:3.14934in" />
+
+For more tutorials on using Mu, refer to the link：
+
+<https://codewith.mu/en/tutorials/>

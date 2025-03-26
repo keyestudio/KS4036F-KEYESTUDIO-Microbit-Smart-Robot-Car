@@ -1,0 +1,97 @@
+# Install IDE
+
+Micro:bit is a product that requires no IDE installation and only needs
+to download the programming from the web: [Microsoft MakeCode for
+micro:bit (microbit.org)](https://makecode.microbit.org/)
+
+If you need an offline version, refer to the "Offline Makecode" file
+
+2.  **<span class="mark">Install the Driver</span>**
+
+refer to the “4. Install Microbit Driver”file
+
+<img src="media/4abbe9f78ea4446fb85c7c7f77a4d0b9.png" style="width:2.51042in;height:1.40625in" />
+
+3.  **<span class="mark">IDE Setting and Introduction of the
+    Toolbar</span>**
+
+Enter website：[Microsoft MakeCode for micro:bit
+(microbit.org)](https://makecode.microbit.org/)
+
+<img src="media/c95790d808ab26e07d6d3cc1856d2f87.png" style="width:6.99741in;height:1.78959in" />
+
+If your want to import the existing code, tap"Import" → "Import file"→
+"continue".
+
+If you need to write your own code, click on the New Project and enter
+the project name.
+
+<img src="media/b0a030d5638344201c3bec4fba670561.png" style="width:6.74729in;height:3.83479in" />
+
+① Code block area: we can see it subdivided into multiple columns, each
+column contains the corresponding code blocks, which are described at
+the website：<u>https://makecode.microbit.org/reference.</u>
+
+② Code writing area:Our code is completed in this area. There are two
+code blocks in the newly created project.
+
+③ Programming environment setting area: We can set up the language of
+the development environment and import the library files we need.
+
+④ Project name
+
+⑤ Download button of projects
+
+4.  **<span class="mark">Download Code</span>**
+
+Enter”Basic”→ ”show icon“ → ”forever“
+
+<img src="media/3f273e871c63d27b539df248dc77996c.png" style="width:2.68339in;height:2.91333in" />
+<img src="media/46235458ac95c51bae7a5e636d60e262.png" style="width:1.99914in;height:2.75622in" />
+
+Tap<img src="media/ef64143ab716efab13958beb011ee738.png" style="width:1.73472in;height:0.23599in" /> ,
+Windows 10 computers can download it directly to the microbit
+development board.
+
+Windows 7 computers need to find the downloaded code and select "Send
+to"
+microbit<img src="media/d608986784e05c070337f5b17035f990.png" style="width:1.44509in;height:0.3939in" />,
+or copy and paste.
+
+If the computer does not display
+<img src="media/2bf00e2996d36dd45cf760831c85014a.png" style="width:1.35471in;height:0.354in" />,
+please check according to the five files.
+
+<img src="media/ee395bbc7057696c1dd8bcfef7fadb73.png" style="width:2.71875in;height:2.58654in" />
+
+5.  **<span class="mark">Import Code</span>**
+
+Connect the micro:bit development board to your computer via a USB
+cable, then open the online makecode programming page and tap Import.
+
+<img src="media/211a43de1c8477c3f536841d04e2cd57.png" style="width:5.5375in;height:1.33891in" />
+
+Then click Add Folder, select the code file you want to add, and tap "Go
+ahead" to add the code to the online compiler.
+
+<img src="media/e08a6d5bb3ef99e54cf8096dc392e416.png" style="width:3.44253in;height:1.57502in" />
+<img src="media/d9a16d8d7aed3dcfc0b7bab95fdd3d19.png" style="width:2.11458in;height:0.83333in" />
+
+<img src="media/5cd1a8270620c108e0172201ed567694.png" style="width:6.61454in;height:3.70213in" />
+
+6.  **<span class="mark">Install the Library File</span>**
+
+Import makecode
+
+Or add the code manually:
+
+Tap Extensions
+
+<img src="media/c6b984c70f45a5255df51f7f72b78aae.png" style="width:6.99032in;height:4.16941in" />
+
+Enter the link in the search box, and then click on the library file
+named Mini Car.
+
+<img src="media/3b440705fcdd683746eb172c4ed0b5fb.png" style="width:6.99032in;height:3.14714in" />
+
+<img src="media/0cb95a94938c5a8f8c3d9b0c36456fd4.png" style="width:6.99032in;height:4.17426in" />
