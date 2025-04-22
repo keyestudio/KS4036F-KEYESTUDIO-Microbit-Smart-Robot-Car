@@ -1,14 +1,16 @@
 
 
-# 1.MU IDE
+# MicroPython Tutorial
 
-## 1. 1Install MU IDE
+## 1.MU IDE
+
+### 1. 1 Install MU IDE
 
 Official website of Mu：https://codewith.mu/
 
 Mu is a Python code editor for beginning programmers based on teachers and students. The easiest way to get Mu is through the official installer for Windows or Mac OSX (Mu no longer supports 32-bit Windows). The current recommended version is Mu 1.0-beta 2.
 
-### Step 1- Determine the version and download the Mu installer
+#### Step 1- Determine the version and download the Mu installer
 
 Find out if your computer runs Windows or Mac OSX, and open the Explorer, click "This PC", then select Properties to know your Windows system is 32-bit or 64-bit.
 
@@ -22,7 +24,7 @@ Open the link：[https://codewith.mu/en/download](https://codewith.mu/en/downloa
 
 ![image-20250421134841361](./media/image-20250421134841361.png)
 
-### Step 2-Run the installer
+#### Step 2-Run the installer
 
 Locate the installer you just downloaded (it may be in your download folder) and double-click to open the installer file.
 
@@ -40,25 +42,25 @@ Enter“Run anyway”
 
 ![image-20250421135022632](./media/image-20250421135022632.png)
 
-### Step 3-Protocol
+#### Step 3-Protocol
 
 Check the license, then click Install.
 
 ![image-20250421135048201](./media/image-20250421135048201.png)
 
-### Step 4-Installation
+#### Step 4-Installation
 
 It will take a few seconds to install the Mu on your computer.
 
 ![image-20250421135107844](./media/image-20250421135107844.png)
 
-### Step 5-Finish
+#### Step 5-Finish
 
 Tap Finish
 
 ![image-20250421135124744](./media/image-20250421135124744.png)
 
-### Step 6-Start the Mu
+#### Step 6-Start the Mu
 
 You can launch Mu by clicking on the icon in the Start menu, or by typing Mu in the search box (both methods are shown below). 
 
@@ -68,7 +70,7 @@ The main interface of Mu is shown below:
 
 ![image-20250421135203693](./media/image-20250421135203693.png)
 
-## 1.2 Install the Driver
+### 1.2 Install the Driver
 
 First of all, connect the micro:bit to your computer using a USB cable，then double-click  ![img](./media/wps34.jpg)to install.
 
@@ -88,7 +90,7 @@ Then click“Computer”—>“Properties”—>“Device manager”, as shown b
 
 ![image-20250421140222321](./media/image-20250421140222321.png)
 
-## 1.3 Compiler Setup and Toolbar Introduction
+### 1.3 Compiler Setup and Toolbar Introduction
 
 Set“mode”to micro bit first
 
@@ -100,7 +102,7 @@ Details about the Mu operation page：[https://codewith.mu/en/tutorials/1.1/star
 
 More tutorials on using Mu：[https://codewith.mu/en/tutorials/](https://codewith.mu/en/tutorials/1.1/start)
 
-## 1.4 Install the Library File
+### 1.4 Install the Library File
 
 Before importing the library, you need to upload a.py code to microbit. Here we take the RGB module "code_1.py" in the tutorial as an example.
 
@@ -150,7 +152,7 @@ If you have downloaded other programs on the micro:bit board, except the "keyes_
 
 If you always use the same micro: bit board for Micropython programming, you do not need to send the it to the micro: bit again.
 
-## 1.5 Add Code to Compiler
+### 1.5 Add Code to Compiler
 
 We take the first project of the basic tutorial "Heartbeat" as an example, open the "Program" folder in the first project folder and locate the file "microbit-Heartbeat.
 
@@ -166,7 +168,7 @@ as shown below:
 
 ![image-20250421141117339](./media/image-20250421141117339.png)
 
-## 1.6 Download Code to Micro:bit
+### 1.6 Download Code to Micro:bit
 
 Connect the micro：bit board and the computer via the micro USB cable.
 
@@ -194,23 +196,23 @@ Correct the code according to the error prompt. Then click "Check" again and Mu 
 
 For more tutorials on using Mu, refer to the link：https://codewith.mu/en/tutorials/
 
-# 2. Basic Projects
+## 2. Basic Projects
 
-## 2.1 Heart Beat
+### 2.1 Heart Beat
 
-### 2.1.1 Description
+#### 2.1.1 Description
 
 The sensor modules and LED dot matrix of the Microbit basic project comes with the micro: bit mainboard. 
 
 Prepare a Micro:bit board and a USB cable. Next we will conduct a basic experiment that a heartbeat pattern flashes on the micro:bit board.
 
-### 2.1.2 Components Needed
+#### 2.1.2 Components Needed
 
 | ![mcirobit](./media/mcirobit.png) | ![usb](./media/usb.png) |
 | :-------------------------------: | :---------------------: |
 |           Micro:bit * 1           |      Micro:bit * 1      |
 
-### 2.1.3 Test Code
+#### 2.1.3 Test Code
 
 You can upload the code directly from the tutorial (read the "Development Environment Configuration" file if in doubt).
 
@@ -225,7 +227,7 @@ display.show(Image.HEART_SMALL)
 sleep(500)
 ```
 
-### 2.1.4 Code Explanation
+#### 2.1.4 Code Explanation
 
 This is a permanent loop that make the micro: bit execute the code in the loop forever.
 
@@ -237,7 +239,7 @@ This is a permanent loop that make the micro: bit execute the code in the loop f
 | sleep(500)                      | Delay in 500ms                                               |
 | display.show(Image.HEART_SMALL) | LED dot matrix displays![image-20250421144739465](./media/image-20250421144739465.png) |
 
-### 2.1.5 Test Result
+#### 2.1.5 Test Result
 
 Upload the code to the micro:bit and plug in it via a USB cable, then the LED dot matrix displays![image-20250421144625274](./media/image-20250421144625274.png)and ![image-20250421144739465](./media/image-20250421144739465.png)
 
@@ -245,7 +247,7 @@ If download unsuccessfully, disconnect the micro:bit and reboot it
 
 ![image-20250421144923855](./media/image-20250421144923855.png)
 
-### 2.1.6 Expanded Knowledge
+#### 2.1.6 Expanded Knowledge
 
 You can see that "Image.HEART" is equal to![image-20250421144625274](./media/image-20250421144625274.png);Image.HEART_SMALL" is
 
@@ -349,9 +351,9 @@ Image.GHOST
 
 • Image.SNAKE，Image.ALL_CLOCKS，Image.ALL_ARROWS
 
-## 2.2 Light Up A Single LED
+### 2.2 Light Up A Single LED
 
-### 2.2.1 . Description
+#### 2.2.1 . Description
 
 Micro:bit motherboard consists of 25 light-emitting diodes, 5 pcs in a group,  which correspond to x and y axis, forging a 5*5 matrix. Moreover, every diode locates at the point of x and y axis. 
 
@@ -359,13 +361,13 @@ Virtually, we could control an LED by setting coordinate points. For instance, s
 
 ![image-20250421145236833](./media/image-20250421145236833.png)
 
-### 2.2.2 Components Needed
+#### 2.2.2 Components Needed
 
 | ![mcirobit](./media/mcirobit.png) | ![usb](./media/usb.png) |
 | :-------------------------------: | :---------------------: |
 |           Micro:bit * 1           |      Micro:bit * 1      |
 
-### 2.2.3 Test Code
+#### 2.2.3 Test Code
 
 You can upload the code directly from the tutorial (read the "Development Environment Configuration" file if in doubt).
 
@@ -388,7 +390,7 @@ display.show(val3)
 sleep(500)
 ```
 
-### 2.2.4 Code Explanation
+#### 2.2.4 Code Explanation
 
 | code                                                         | Explanation                                                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -398,27 +400,27 @@ sleep(500)
 | display.show(val1)<br/>sleep(500)<br/>display.show(val3)<br/>sleep(500) | LED at (1,0) blinks for 0.5s                                 |
 | display.show(val2)<br/>sleep(500)<br/>display.show(val3)<br/>sleep(500) | LED at (3,4) flashes for 0.5s                                |
 
-### 2.2.5 Test Result
+#### 2.2.5 Test Result
 
 After downloading code, plug in power with a USB cable, you will see the LED at(1,0) flashes for 0.5s then the LED at (3,4) blinks for 0.5s, in loop way.
 
 ![image-20250421150325385](./media/image-20250421150325385.png)
 
-## 2.3 5 x 5 LED Dot Matrix
+### 2.3 5 x 5 LED Dot Matrix
 
-### 2.3.1 Description
+#### 2.3.1 Description
 
 Dot matrix gains popularity in our life, such as LED screen, bus station and the mini TV in the lift.
 
 The dot matrix of Micro:bit board consists of 25 light emitting diodes. In previous lesson, we control LED of Micro:bit board to form patterns, numbers and character strings by setting the coordinate points. Moreover, we could adopt another way to complete the display of patterns, numbers and character strings.
 
-### 2.3.2  Components Needed
+#### 2.3.2  Components Needed
 
 | ![mcirobit](./media/mcirobit.png) | ![usb](./media/usb.png) |
 | :-------------------------------: | :---------------------: |
 |           Micro:bit * 1           |      Micro:bit * 1      |
 
-### 2.3.3 Test Code
+#### 2.3.3 Test Code
 
 You can upload the code directly from the tutorial (read the "Development Environment Configuration" file if in doubt).
 
@@ -466,7 +468,7 @@ display.clear()
 
 
 
-### 2.3.4 Code Explanation
+#### 2.3.4 Code Explanation
 
 | code                                                         | Explanation                                                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -480,15 +482,15 @@ display.clear()
 | display.show(Image.ARROW_NE)<br/>display.show(Image.ARROW_SE)<br/>display.show(Image.ARROW_SW)<br/>display.show(Image.ARROW_NW) | micro:bit shows“Northeast”arrow<br/>micro:bit displays“Southeast”arrow<br/>micro:bit shows“Southwest”arrow<br/>micro:bit displays“Northwest”<br/>arrow |
 | display.clear()                                              | The LED dot matrix of micro:bit clears                       |
 
-### 2.3.5 .Test Result
+#### 2.3.5 .Test Result
 
 Download `2.3-5×5 LED Dot Matrix-2.py` to micro:bit, then the LED dot matrix will display“1”,“2”, 
 
 “3”,“4”,“5”,“↓”,“hello!”,“❤”,![image-20250421152155979](./media/image-20250421152155979.png),![image-20250421152220664](./media/image-20250421152220664.png),![image-20250421152234127](./media/image-20250421152234127.png),![image-20250421152248864](./media/image-20250421152248864.png)patterns. Each interval is 500ms.
 
-## 2.4 Programmable Buttons
+### 2.4 Programmable Buttons
 
-### 2.4.1 Description
+#### 2.4.1 Description
 
 The button can control the on and off of the circuit, which is attached to the circuit. The circuit is disconnected when the button is not pressed. The circuit is connected as soon as it is pressed, but it is disconnected after being released. 
 
@@ -500,13 +502,13 @@ Both ends of button are like two mountains. There is a river in between. The int
 
 Micro:bit board has three buttons, the reset button is on the back and two programmable buttons are on the front. Press A, B and AB at the same time respectively, and the corresponding screen displays them respectively.
 
-### 2.4.2 Components Needed
+#### 2.4.2 Components Needed
 
 | ![mcirobit](./media/mcirobit.png) | ![usb](./media/usb.png) |
 | :-------------------------------: | :---------------------: |
 |           Micro:bit * 1           |      Micro:bit * 1      |
 
-### 2.4.3 Test Cod
+#### 2.4.3 Test Cod
 
 You can upload the code directly from the tutorial (read the "Development Environment Configuration" file if in doubt). 
 
@@ -569,7 +571,7 @@ display.show(val6)
 
 **Test Result：**Upload `2.4-Programmable Buttons-2.py` and plug in board via USB cable. Press button A, the number of rows lit by the LED dot matrix will increase, when B is pressed, the number of rows lit by the LED dot matrix will decrease.
 
-### 2.4.4 Code Explanation
+#### 2.4.4 Code Explanation
 
 | code                                                         | Explamation                                                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -580,21 +582,21 @@ display.show(val6)
 
 
 
-## 2.5 Temperature Measurement
+### 2.5 Temperature Measurement
 
-### 2.5.1 Description
+#### 2.5.1 Description
 
 Micro:bit main board doesn’t come with temperature sensor actually, but detect temperature through built-in temperature of NFR51822 chip.  Thereby, the detected temperature is more close to chip’s temperature. In this project, we will use the sensor to test the temperature in the current environment, and display the test results in the display data (equipment),  then set the temperature range detected by the sensor in a way that controls the LED dot matrix to display different patterns.
 
 ![image-20250421155923137](./media/image-20250421155923137.png)
 
-###  2.5.2 Components Needed
+####  2.5.2 Components Needed
 
 | ![mcirobit](./media/mcirobit.png) | ![usb](./media/usb.png) |
 | :-------------------------------: | :---------------------: |
 |           Micro:bit * 1           |      Micro:bit * 1      |
 
-### 2.5.3 Test Code
+#### 2.5.3 Test Code
 
 You can upload the code directly from the tutorial (read the "Development Environment Configuration" file if in doubt). 
 
@@ -627,7 +629,7 @@ display.show(Image.HEART_SMALL)
 
 **Test Result：**Upload the`2.5- Temperature Measurement -2.py` plug in micro:bit via USB cable, when the ambient temperature is less than 35℃, 5*5LED will show![image-20250421144739465](./media/image-20250421144739465.png). When the temperature is equivalent to or greater than 35℃, the pattern ![image-20250421144625274](./media/image-20250421144625274.png) will appear.
 
-### 2.5.4 Code Explanation
+#### 2.5.4 Code Explanation
 
 | code                                                         | Explanation                                                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -638,21 +640,21 @@ display.show(Image.HEART_SMALL)
 | sleep(500)                                                   | Delay in 500ms                                               |
 | **if** temperature() >= 35:<br/>display.show(Image.HEART)<br/>**else**:<br/>display.show(Image.HEART_SMALL) | If temperature value ≥35℃ <br/>micro:bit shows“ ![image-20250421144625274](./media/image-20250421144625274.png)”<br/>If temperature value<35℃<br/>micro:bit displays“![image-20250421144739465](./media/image-20250421144739465.png) ” |
 
-## 2.6 Compass
+### 2.6 Compass
 
-### 2.6.1 Description
+#### 2.6.1 Description
 
 This project mainly introduces the use of the Micro:bit’s compass. It can be used to determine the direction. We need to calibrate the Micro:bit board when magnetic sensor works. The correct calibration method is to rotate the Micro:bit board.
 
 <span style="color:red;">In addition, the objects nearby may affect the accuracy of readings and calibration.</span>
 
-### 2.6.2 Components Needed
+#### 2.6.2 Components Needed
 
 | ![mcirobit](./media/mcirobit.png) | ![usb](./media/usb.png) |
 | :-------------------------------: | :---------------------: |
 |           Micro:bit * 1           |      Micro:bit * 1      |
 
-### 2.6.3 Test Code
+#### 2.6.3 Test Code
 
 You can upload the code directly from the tutorial (read the "Development Environment Configuration" file if in doubt). 
 
@@ -712,7 +714,7 @@ As shown below, the arrow pointing to the upper right when the value ranges from
 
 Upload `2.6-Magnetic sensor-2.py` onto micro:bit board and don’t plug off USB cable. After calibration, tilt Micro:bit board, the LED dot matrix displays the direction signs.
 
-### 2.6.4 Code Explanation
+#### 2.6.4 Code Explanation
 
 | code                                                         | Explanation                                                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -725,21 +727,21 @@ Upload `2.6-Magnetic sensor-2.py` onto micro:bit board and don’t plug off USB 
 | **if**...**elif**...**else**                                 | Set the value of compass to variable x                       |
 | display.show(Image("00999:""0009<br/>9:""00909:""09000:""90000"))<br/>display.show(Image("99900:""9900<br/>0:""90900:""00090:""00009"))<br/>display.show(Image("00900:""0900<br/>0:""99999:""09000:""00900"))<br/>display.show(Image("00009:""0009<br/>0:""90900:""99000:""99900"))<br/>display.show(Image("00900:""0090<br/>0:""90909:""09990:""00900"))<br/>display.show(Image("90000:""0900<br/>0:""00909:""00099:""00999"))<br/>display.show(Image("00900:""0009<br/>0:""99999:""00090:""00900"))<br/>display.show(Image("00900:""0999<br/>0:""90909:""00900:""00900")) | Micro:bit shows the Northeast arrow sign<br/>Micro:bit shows the Northwest arrow sign<br/>Micro:bit shows the west arrow sign<br/>Micro:bit shows the Southwest arrow sign<br/>Micro:bit shows the Southeast arrow sign<br/>Micro:bit shows the South arrow sign<br/>Micro:bit shows the East arrow sign<br/>Micro:bit shows the North arrow sign |
 
-## 2.7 Accelerometer
+### 2.7 Accelerometer
 
-### 2.7.1 Description
+#### 2.7.1 Description
 
 The Micro:bit board has a built-in LSM303AGR acceleration sensor (accelerometer). It has a resolution of 8,10 and 12 bits, and the program sets the measuring range to 1g, 2g, 4g, and 8g. 
 
 We often use the accelerometer to detect the attitude of machines. In this project, we will introduce the detection of several special postures by the accelerometer, then view the triaxial raw data output by the it.
 
-### 2.7.2 Components Needed
+#### 2.7.2 Components Needed
 
 | ![mcirobit](./media/mcirobit.png) | ![usb](./media/usb.png) |
 | :-------------------------------: | :---------------------: |
 |           Micro:bit * 1           |      Micro:bit * 1      |
 
-### 2.7.3 Test Code
+#### 2.7.3 Test Code
 
 You can upload the code directly from the tutorial (read the "Development Environment Configuration" file if in doubt).
 
@@ -806,7 +808,7 @@ sleep(100)
 
 ![image-20250421162244887](./media/image-20250421162244887.png)
 
-### 2.7.4 Code Explanation
+#### 2.7.4 Code Explanation
 
 | code                                                         | Explanation                                                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -818,9 +820,9 @@ sleep(100)
 | print("x, y, z:", x, y, z)                                   | The value of acceleration will be shown                      |
 | sleep(100)                                                   | sleep(100)                                                   |
 
-## 2.8 Detect Light Intensity
+### 2.8 Detect Light Intensity
 
-### 2.8.1 Description
+#### 2.8.1 Description
 
 This project will introduce how Micro:bit detects the external light intensity. Since Micro:bit doesn’t come with a photosensitive sensor, the detection of light intensity is completed through the LED matrix. 
 
@@ -828,13 +830,13 @@ The LED matrix is used to sense the surrounding light and repeatedly converts th
 
 ![image-20250422083733607](./media/image-20250422083733607.png)
 
-### 2.8.2 Components Needed
+#### 2.8.2 Components Needed
 
 | ![mcirobit](./media/mcirobit.png) | ![usb](./media/usb.png) |
 | :-------------------------------: | :---------------------: |
 |           Micro:bit * 1           |      Micro:bit * 1      |
 
-### 2.8.3 Test Code
+#### 2.8.3 Test Code
 
 You can upload the code directly from the tutorial (read the "Development Environment Configuration" file if in doubt). 
 
@@ -848,7 +850,7 @@ print("Light intensity:", Lightintensity)
 sleep(100)
 ```
 
-### 2.8.4 Code Explanation
+#### 2.8.4 Code Explanation
 
 | code                                        | Explanation                                                 |
 | ------------------------------------------- | ----------------------------------------------------------- |
@@ -859,7 +861,7 @@ sleep(100)
 | print("Light intensity:", Lightintensity)   | BBC microbit REPL prints the detected light intensity value |
 | sleep(100)                                  | Delay in 100ms                                              |
 
-### 2.8.5 Test Result
+#### 2.8.5 Test Result
 
 Download code onto micro:bit board, don’t plug off USB cable. Click “REPL”and press the reset buttons, the light intensity value will be displayed, as shown below. 
 
@@ -867,21 +869,21 @@ Covering the LED dot matrix, the intensity value is 0; on the contrary, the inte
 
 ![image-20250422084403757](./media/image-20250422084403757.png)
 
-## 2.9 Speaker
+### 2.9 Speaker
 
-### 2.9.1 Description
+#### 2.9.1 Description
 
 The micro:bit motherboard has a built-in speaker, which makes it very easy to add a sound to your project. The speaker can be programmed to emit a variety of tones, such as writing a song: Ode to Joy, and play it.
 
 ![image-20250422084641541](./media/image-20250422084641541.png)
 
-### 2.9.2 Components Needed
+#### 2.9.2 Components Needed
 
 | ![mcirobit](./media/mcirobit.png) | ![usb](./media/usb.png) |
 | :-------------------------------: | :---------------------: |
 |           Micro:bit * 1           |      Micro:bit * 1      |
 
-### 2.9.3 Test Code
+#### 2.9.3 Test Code
 
 You can upload the code directly from the tutorial (read the "Development Environment Configuration" file if in doubt).
 
@@ -902,7 +904,7 @@ audio.play(Sound.YAWN)
 sleep(1000)
 ```
 
-### 2.9.4 Code Explanation
+#### 2.9.4 Code Explanation
 
 | code                     | Explanation                                             |
 | ------------------------ | ------------------------------------------------------- |
@@ -912,23 +914,23 @@ sleep(1000)
 | audio.play(Sound.GIGGLE) | Make a giggle sound                                     |
 | sleep(1000)              | Delay in 1000ms                                         |
 
-### 2.9.5 Test Result
+#### 2.9.5 Test Result
 
 Download code onto micro:bit board, don’t plug off USB cable, then the speaker will emit a sound and the LED dot matrix will display a music logo pattern.
 
-## 2.10 Touch-sensitive Logo
+### 2.10 Touch-sensitive Logo
 
-### 2.10.1 Description
+#### 2.10.1 Description
 
 If you have a micro:bit mainboard, it makes sense to use a gold touch-sensitive logo as another input in your project, which is like an extra button. It uses a capacitive touch sensor that detects small changes in electric fields when you press (or touch) it with your finger. When you touch it, you can control the micro:bit board to perform certain functions.
 
-### 2.10.2 Components Needed
+#### 2.10.2 Components Needed
 
 | ![mcirobit](./media/mcirobit.png) | ![usb](./media/usb.png) |
 | :-------------------------------: | :---------------------: |
 |           Micro:bit * 1           |      Micro:bit * 1      |
 
-### 2.10.3 Test Code
+#### 2.10.3 Test Code
 
 You can upload the code directly from the tutorial (read the "Development Environment Configuration" file if in doubt).
 
@@ -959,7 +961,7 @@ else:
 display.show(Image.ASLEEP)
 ```
 
-### 2.10.4 Code Explanation
+#### 2.10.4 Code Explanation
 
 （1）Micro:bit records the time in ms (thousands of minutes per second) when it is started. This is called the running time. 
 
@@ -977,27 +979,27 @@ display.show(Image.ASLEEP)
 
 （8）If the stopwatch is already started, if "running" is true, the code also prevents false readings by ensuring that the time variable changes only when button B is pressed.
 
-### 2.10.5 Test Result
+#### 2.10.5 Test Result
 
 Upload the code and plug in micro:bit via a USB cable. Press button A to start the stopwatch. When the timer is timed, the LED dot matrix displays a beating heart, tap button B can stop it. It will keep adding time, like a real stopwatch. 
 
 Press the gold LOGO logo on the front of the micro:bit can display the measured time in seconds. To reset the time to zero, press the Reset button on the back of the micro:bit board.
 
-## 2.11 Microphone
+### 2.11 Microphone
 
-### 2.11.1 Description
+#### 2.11.1 Description
 
 The micro:bit motherboard boasts a built-in microphone, which can be used to measure the ambient sound level. When you clap, the LED indicator on the micro:bit motherboard will turn on. It can measure the intensity of sound. In this connection, you can make a sound level chart or disco lights that are in tune with the music.
 
 ![image-20250422085641537](./media/image-20250422085641537.png)
 
-### 2.11.2 Components Needed
+#### 2.11.2 Components Needed
 
 | ![mcirobit](./media/mcirobit.png) | ![usb](./media/usb.png) |
 | :-------------------------------: | :---------------------: |
 |           Micro:bit * 1           |      Micro:bit * 1      |
 
-### 2.11.3 Test Code
+#### 2.11.3 Test Code
 
 You can upload the code directly from the tutorial (read the "Development Environment Configuration" file if in doubt).
 
@@ -1042,7 +1044,7 @@ maxSound = soundLevel
 
 **Test Result:** Download `2.11-Microphone-2.py` to micro:bit board and keep the USB cable connected. When you press the A button on the micro:bit motherboard, the LED dot matrix displays the detected maximum sound level value in the environment at this time (<span style="color:red;">Note: reset the maximum value by pressing the reset button on the back of the micro:bit</span>). When applauding, the louder the detected sound, the brighter the 25 LEDs.
 
-### 2.11.4 Code Explanation
+#### 2.11.4 Code Explanation
 
 | code                                                         | Explanation                                                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -1054,9 +1056,9 @@ maxSound = soundLevel
 | lights =Image("11111:""11111:""11111:"" 11111:""11111")      | Set Image() to variable lights                               |
 | soundLevel = microphone.sound_level()<br/>**if** button_a.is_pressed():<br/>display.scroll(maxSound)<br/>**else:**<br/>soundLevel = microphone.sound_level()<br/>display.show(lights * soundLevel) | Set microphone.sound_level() to variable soundLevel<br/>If button A is pressed, LED dot matrix<br/>displays the value of the sound level. <br/>Otherwise, Set microphone.sound_level() to<br/>variable soundLevel<br/>The 25 LEDs are like breathing lights as<br/>the sound level changes |
 
-## 2.12 Bluetooth Wireless Communication
+### 2.12 Bluetooth Wireless Communication
 
-### 2.12.1 Description
+#### 2.12.1 Description
 
 Although the micro:bit enjoys a low-power Bluetooth module that can make Bluetooth connections and send data, it only boasts 16k RAM. The BLE stack takes up 12k RAM, which means there is not enough space to run microPython, thus only one microPython or Bluetooth service can be running at a time.
 
@@ -1068,11 +1070,11 @@ The above projects uses the built-in modules of micro: bit and LED dot matrix, h
 
 
 
-# 3. Robot Car Project
+## 3. Robot Car Project
 
-## 3.1 RGB Module
+### 3.1 RGB Module
 
-### 3.1.1  Description
+#### 3.1.1  Description
 
 The RGB color mode is a color standard in the industry. It obtains various colors by changing the three color channels of red (R), green (G), and blue (B) and integrating them. RGB denotes the three colors of red, green and blue.
 
@@ -1094,7 +1096,7 @@ RGB color mixing is like having red, green and blue lamps. When their light is s
 
 In this project, we are going to make two experiments. One is to make two RGB lights light up three colors of red, green and blue, the other is to make two RGB lights gradually display different colors.
 
-### 3.1.2 Preparation
+#### 3.1.2 Preparation
 
 （1）Insert the micro: bit correctly into the expansion board
 
@@ -1108,7 +1110,7 @@ In this project, we are going to make two experiments. One is to make two RGB li
 
 If you want to add the Mini car extension library(you can refer to the "1.4 Install the Library File "file).
 
-### 3.1.3 Schematic Diagram
+#### 3.1.3 Schematic Diagram
 
 ![image-20250422092040537](./media/image-20250422092040537.png)
 
@@ -1116,7 +1118,7 @@ If you want to add the Mini car extension library(you can refer to the "1.4 Inst
 
 **Working Principle:** Microbit, as the host, sends instructions to the slave STC8G1K08 through the IIC, then the slave outputs PWM to control RGB LED lights. This greatly saves the IO ports of the microbit board, for the IIC enables to control two motors and two RGB LED lights.
 
-### 3.1.4 Code Explanation
+#### 3.1.4 Code Explanation
 
 Functions of RGB LEDs in Keyes_MiniCar.py file:
 
@@ -1132,7 +1134,7 @@ right.green（0-255）: Set the right RGB to green，0 is the brightest and 255 
 
 right.blue（0-255）: Set the right RGB to blue，0 is the brightest and 255 is the darkest.
 
-### 3.1.5 Test Code
+#### 3.1.5 Test Code
 
 You can upload the `3.1-RGB LED-1.py` file directly from the tutorial (read the "Development Environment Configuration" file if in doubt).
 
@@ -1225,7 +1227,7 @@ while True:
 
 However, when the green light is off, the red light will be on, then a mixture of blue and red will be shown. In closing the red and blue lights will be off.
 
-### 3.1.6 Expanded Knowledge
+#### 3.1.6 Expanded Knowledge
 
 1s = 1000ms ； 1ms = 1000us ；1us = 1000nm
 
@@ -1233,9 +1235,9 @@ Then the 1000 ms we used in the project is 1 s
 
 Maybe you are capable of configuring the light color you want by yourself. You solely need to configure the red, green and blue PWM for the RGB.
 
-## 3.2 Motor Driving
+### 3.2 Motor Driving
 
-### 3.2.1 Description
+#### 3.2.1 Description
 
 The robot car is equipped with two DC geared motors, which are developed on the ordinary DC motors. It enjoys a matching gear reduction box, which provides a lower speed but a larger torque. Furthermore, different reduction ratios of the box can provide different speeds and torques.
 
@@ -1245,7 +1247,7 @@ Moreover, the car boasts a STC8G1K08 and a HR8833MTE chip. To save the IO ports,
 
 ![image-20250422093445729](./media/image-20250422093445729.png)
 
-### 3.2.2 Preparation
+#### 3.2.2 Preparation
 
 （1）Insert the micro: bit correctly into the expansion board
 
@@ -1259,13 +1261,13 @@ Moreover, the car boasts a STC8G1K08 and a HR8833MTE chip. To save the IO ports,
 
 If you want to add the Mini car extension library(you can refer to the "1.4 Install the Library File "file).
 
-### 3.2.3 Circuit Diagram
+#### 3.2.3 Circuit Diagram
 
 ![image-20250422094016614](./media/image-20250422094016614.png)
 
 ![image-20250422092049361](./media/image-20250422092049361.png)
 
-### 3.2.4 Code Explanation
+#### 3.2.4 Code Explanation
 
 Functions in Keyes_MiniCar.py file：
 
@@ -1279,7 +1281,7 @@ Motor_R(0, 70): The right wheels will move back with a speed of PWM70
 
 Motor_stop(): The car will stop
 
-### 3.2.5 Test Code
+#### 3.2.5 Test Code
 
 You can upload the `3.2-Motor.py` code directly from the tutorial (read the "Development Environment Configuration" file if in doubt). 
 
@@ -1312,11 +1314,11 @@ while True:
     sleep(1000)
 ```
 
-### 3.2.6 Test Result
+#### 3.2.6 Test Result
 
 Upload the code to the micro:bit board, then turn on the switch at the back of the car, then the car will go forward for 1s, backward for 1s, turn left for 1s, turn right for 1s and stop for 1s.
 
-### 3.2.7 Expanded Knowledge
+#### 3.2.7 Expanded Knowledge
 
 **How to make the motor turn left?**
 
@@ -1330,9 +1332,9 @@ Upload the code to the micro:bit board, then turn on the switch at the back of t
 
 <span style="color:red;">The principle of making the car turn right is the same, you only need to switch the motor.</span>
 
-## 3.3 Light Tracking Smart Car
+### 3.3 Light Tracking Smart Car
 
-### 3.3.1 Description
+#### 3.3.1 Description
 
 Do you find that the street lights outside will light up when it gets dark and  goes off at dawn? Next, we will learn the main component that causes this circumstance, which is "photoresistor".
 
@@ -1346,7 +1348,7 @@ It is commonly applied to light measurement, control and conversion, light contr
 
 In this project, we will use the left and right photoresistors to control the car to find the light source.
 
-### 3.3.2 Preparation
+#### 3.3.2 Preparation
 
 （1）Insert the micro: bit correctly into the expansion board
 
@@ -1360,11 +1362,11 @@ In this project, we will use the left and right photoresistors to control the ca
 
 If you want to add the Mini car extension library(you can refer to the "1.4 Install the Library File "file).
 
-### 3.3.3 Circuit Diagram
+#### 3.3.3 Circuit Diagram
 
 ![image-20250422094513295](./media/image-20250422094513295.png)
 
-### 3.3.4 Read the Photoresistor
+#### 3.3.4 Read the Photoresistor
 
 You can upload the code `3.3-Light Tracking Smart Car.py` directly from the tutorial (read the "Development Environment Configuration" file if in doubt). 
 
@@ -1385,11 +1387,11 @@ while True:
 
 ![image-20250422094613313](./media/image-20250422094613313.png)
 
-### 3.3.6 Flow Chart
+#### 3.3.5 Flow Chart
 
 ![image-20250422094742219](./media/image-20250422094742219.png)
 
-### 3.3.7 Light Tracking Smart Car
+#### 3.3.6 Light Tracking Smart Car
 
 You can upload the code `3.3-Read the Photoresistor.py` directly from the tutorial (read the "Development Environment Configuration" file if in doubt). 
 
@@ -1416,13 +1418,13 @@ while True:
         minicar.Motor_stop()           #The car stops
 ```
 
-### 3.3.8 Test Result
+#### 3.3.7 Test Result
 
 After uploading the code, turn on the switch on the rear of the car, then you can use the flashlight to play with the car. It’s best used in a relatively dark environment. When the ambient light intensity is above 650, the car will keep moving.
 
-## 3.4 Line Tracking Smart Car
+### 3.4 Line Tracking Smart Car
 
-### 3.4.1 Description
+#### 3.4.1 Description
 
 The car comes with two line tracking sensors and two potentiometers.
 
@@ -1436,7 +1438,7 @@ The resistance varies depending on the intensity of the infrared signals receive
 
 <span style="color:red;">The two line tracking sensors on the expansion board are controlled by P12 and P13 of the micro bit control board, the left one is controlled by P13, and the right is controlled by P12. Adjust the line tracking sensors, and place the car on a black ground, twist the potentiometers until the LED (D3,D2) is on, then adjust them until it is off.</span>
 
-### 3.4.2 Preparation
+#### 3.4.2 Preparation
 
 （1）Insert the micro: bit correctly into the expansion board
 
@@ -1450,11 +1452,11 @@ The resistance varies depending on the intensity of the infrared signals receive
 
 If you want to add the Mini car extension library(you can refer to the "1.4 Install the Library File "file).
 
-### 3.4.3 Circuit Diagram
+#### 3.4.3 Circuit Diagram
 
 ![image-20250422095208760](./media/image-20250422095208760.png)
 
-### 3.4.4 Read the Line Tracking Sensor
+#### 3.4.4 Read the Line Tracking Sensor
 
 You can upload the code `3.4-Patrol car.py` directly from the tutorial (read the "Development Environment Configuration" file if in doubt). 
 
@@ -1481,11 +1483,11 @@ When the line tracking sensor detects white object, 0 will be shown and D2, D3 w
 
 ![image-20250422095318117](./media/image-20250422095318117.png)
 
-### 3.4.5 Flow Chart
+#### 3.4.5 Flow Chart
 
 ![image-20250422095411939](./media/image-20250422095411939.png)
 
-### 3.4.6  Test Code
+#### 3.4.6  Test Code
 
 You can upload the code `3.4-Read the Line Tracking Sensor.py` directly from the tutorial (read the "Development Environment Configuration" file if in doubt). 
 
@@ -1520,9 +1522,9 @@ while True:
 
 **Test Result:** Upload the code  and open the power switch on the car. Place the car on the line tracking paper, then it will follow the black line to move.
 
-## 3.5 Ultrasonic Following and Obstacle Avoidance
+### 3.5 Ultrasonic Following and Obstacle Avoidance
 
-### 3.5.1 Description
+#### 3.5.1 Description
 
 The ultrasonic sensor uses sonar to determine distance to an object like bats do. It will emit the ultrasonic waves after trigger signals. When the ultrasonic waves encounter the object and are reflected back, the module will output an echo signal, thus, it can determine the distance of object from the time difference between trigger signal and echo signal. 
 
@@ -1532,7 +1534,7 @@ In this project, we will learn ultrasonic ranging, ultrasonic following and ultr
 
 ![image-20250422100310394](./media/image-20250422100310394.png)
 
-### 3.5.2 Specifications
+#### 3.5.2 Specifications
 
 Working voltage：DC 3.3V-5V
 
@@ -1556,7 +1558,7 @@ Dimension：49mm x 22mm x 19mm
 
 Environmental protection attributes: ROHS
 
-### 3.5.3 Working Principle
+#### 3.5.3 Working Principle
 
 ![image-20250422100457215](./media/image-20250422100457215.png)
 
@@ -1566,7 +1568,7 @@ Environmental protection attributes: ROHS
 
 (3)If there is a signal return, when ECHO outputs a high level, then the duration of the high level is the time from transmission to reception of the ultrasonic waves. Then test distance = high level duration 340m/s x 0.5. 
 
-### 3.5.4 Preparation
+#### 3.5.4 Preparation
 
 （1）Insert the micro: bit correctly into the expansion board
 
@@ -1580,7 +1582,7 @@ Environmental protection attributes: ROHS
 
 If you want to add the Mini car extension library(you can refer to the "1.4 Install the Library File "file).
 
-### 3.5.5  Code for Ultrasonic Ranging
+#### 3.5.5  Code for Ultrasonic Ranging
 
 Upload the `3.5-Read Distance.py` file directly from the tutorial 
 
@@ -1602,11 +1604,11 @@ After downloading code, keep USB cable connected, click**“REPL”button and pr
 
 ![image-20250422100706618](./media/image-20250422100706618.png)
 
-### 3.5.6 Flow Chart of Ultrasonic Following
+#### 3.5.6 Flow Chart of Ultrasonic Following
 
 ![image-20250422100749416](./media/image-20250422100749416.png)
 
-### 3.5.7 Code for Ultrasonic Following
+#### 3.5.7 Code for Ultrasonic Following
 
 Upload the `3.5-Ultrasonic Following Car.py` file directly from the tutorial 
 
@@ -1635,11 +1637,11 @@ while True:
 
 **Test Result:**Upload the code and open the power switch on the car. If there is an obstacle in the place larger than 10cm and less than 30cm in front of the car, the car moves forward, if the obstacle appears within 6cm, the car will back up, and it stops when it is greater than 6cm and less than 10cm or greater than 30cm.
 
-### 3.5.8 Flow Chart of Ultrasonic Obstacle Avoidance
+#### 3.5.8 Flow Chart of Ultrasonic Obstacle Avoidance
 
 ![image-20250422100935704](./media/image-20250422100935704.png)
 
-### 3.5.9 Code for Ultrasonic Obstacle Avoidance
+#### 3.5.9 Code for Ultrasonic Obstacle Avoidance
 
 Upload the `3.5-Ultrasonic Obstacle Avoidance Car.py` file directly from the tutorial 
 

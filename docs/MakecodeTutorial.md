@@ -1,12 +1,16 @@
 
 
-# 1. Download code file
+
+
+# Makecode Tutorial
+
+## 1. Download code file
 
 [Click to download](./Makecode_Codes.zip)
 
-# 2.Getting started with micro:bit
+## 2.Getting started with micro:bit
 
-## 2.1 Introduction
+### 2.1 Introduction
 
 The micro:bit is a pocket sized computer that has sensors and outputs built in. You can use it to create physical computing
 
@@ -24,7 +28,7 @@ projects that interact with the real world, from robots to musical instruments a
 
 A browser to run the MakeCode editor:[https://makecode.micro:bit.org/](https://makecode.micro:bit.org/)
 
-## 2.2 Meet The Micro:bit
+### 2.2 Meet The Micro:bit
 
 **New micro:bit (V2)**
 
@@ -70,7 +74,7 @@ The editors will support both versions simultaneously for features common to bot
 
 To convert an old HEX file into a universal HEX file, drag it into the editor it was created in and then export it back to your computer where it can be dragged and dropped onto the micro:bit. If you attempt to use an old .Hex file without updating it, the micro:bit will display a compatibility error.
 
-## 2.3 Create Your First Project in the MakeCode Editor
+### 2.3 Create Your First Project in the MakeCode Editor
 
 In this step you will take a tour of the MakeCode editor, and create your
 
@@ -160,7 +164,7 @@ The simulator will display a beating heart.
 
 In the next step you will learn how to download your program onto your physical micro:bit.
 
-## 2.4 Transfer Code to The Micro:bit
+### 2.4 Transfer Code to The Micro:bit
 
 The official provides detailed tutorials on how to transferring a program from **multiple devices** to the micro:bit.
 
@@ -180,7 +184,7 @@ Transferring a program that has been downloaded as a file
 
 We will introduce you two methods to transfer the program :
 
-### 2.4.1 Method 1: Flashing the Micro:bit with WebUSB
+#### 2.4.1 Method 1: Flashing the Micro:bit with WebUSB
 
 **WebUSB**
 
@@ -248,7 +252,7 @@ This will download your program file to your standard download location, probabl
 
 Next step, we will learn how to transfer a program that has been downloaded as a hex file.
 
-### 2.4.2 Method 2: Transfer a program that has been downloaded asa hex file
+#### 2.4.2 Method 2: Transfer a program that has been downloaded asa hex file
 
 In the previous chapter, we have learned how to download the program to your local computer as a hex file.
 
@@ -276,7 +280,7 @@ After you transfer your .hex file, the micro:bit drive will disconnect and recon
 
 **Note:** In the lessons we offered, the micro:bit can only receive hex files and won't store anything else!
 
-## 2.5 Import Files from Your Computer with the Makecode.
+### 2.5 Import Files from Your Computer with the Makecode.
 
 Steps：
 
@@ -309,7 +313,7 @@ The file will open in the Makecode editor.
 
 
 
-## 2.6 Micro:bit Project
+### 2.6 Micro:bit Project
 
 **What you will learn?**
 
@@ -319,7 +323,7 @@ We have learned how to connect your micro:bit to your computer and download a Ma
 
 Now we start learning how to use the micro:bit’s components like;the LEDs, sensors, buttons and the speaker.
 
-### 2.6.0 Prepare:
+#### 2.6.0 Prepare:
 
 Make sure you have downloaded the files we provided that are required to run the robot car.
 
@@ -329,7 +333,7 @@ Download the tutorial package and save it in the folder you want, and
 
 unzip it to use.
 
-### 2.6.1 LED Matrix
+#### 2.6.1 LED Matrix
 
 There are 25 LEDs on the front face that you can use to show pictures, numbers, and words.
 
@@ -375,7 +379,7 @@ Or you can right-click on it and choose "Send to→micro:bit."
 
 
 
-### 2.6.2 Programmable Buttons, A & B
+#### 2.6.2 Programmable Buttons, A & B
 
 Buttons are a very common input device. All micro:bit have two buttons you can program, and a reset button. The programmable buttons, A & B can trigger pieces of code in your programs.
 
@@ -425,7 +429,7 @@ Or you can right-click on it and choose "Send to→micro:bit.
 
 ![image-20250418152919619](./media/image-20250418152919619.png)
 
-### 2.6.3 Temperature Sensor
+#### 2.6.3 Temperature Sensor
 
 The micro:bit does not actually have a temperature sensor. It uses the temperature sensor built into the NFR51822 chip for temperature detection. Therefore, the detected temperature is closer to the temperature of the chip and may have a certain error with the ambient temperature.
 
@@ -497,7 +501,7 @@ Or you can right-click on it and choose "Send to→micro:bit."
 
 --------
 
-### 2.6.4 Magnetometer
+#### 2.6.4 Magnetometer
 
 The micro:bit's built-in magnetometer chip is intended for use as compass to detect magnetic north. Like the compass app on your phone, this requires calibration.
 
@@ -561,7 +565,7 @@ Keep tilting the micro:bit in all directions until all LEDs are lit, and a smile
 
 ![image-20250418161125647](./media/image-20250418161125647.png)
 
-### 2.6.5 Accelerometer
+#### 2.6.5 Accelerometer
 
 An accelerometer is a motion sensor that measures movement. The accelerometer in your BBC micro:bit detects when you tilt it left to right, backwards and forwards and up and down.
 
@@ -647,7 +651,7 @@ Tilt right: LED matrix shows number 7
 
 Free fall: LED matrix shows number 8
 
-### 2.6.6 Light Level Sensor
+#### 2.6.6 Light Level Sensor
 
 Find the light level (how bright or dark it is) where you are. The light level 0 means darkness and 255 means bright light. The micro:bit measures the light around it by using some of the LEDs on the LED screen. 
 
@@ -673,7 +677,7 @@ You will see the values of light intensity in the Data View Window
 
 ----
 
-### 2.6.7 Speaker (V2 only)
+#### 2.6.7 Speaker (V2 only)
 
 The micro:bit can make sounds, play tunes and the new micro:bit has a built-in speaker to make it even easier to make expressive and useful projects. 
 
@@ -703,7 +707,7 @@ Result: the speaker of the micro:bit makes interesting sounds and the LED dot ma
 
 --------
 
-### 2.6.8 Logo Touch (V2 only)
+#### 2.6.8 Logo Touch (V2 only)
 
 The gold logo is a touch sensor that works a bit like a touch screen on a mobile phone, measuring tiny changes in electricity. This is also called a capacitive touch sensor, because it uses measurements of electrical capacitance to work.
 
@@ -731,7 +735,7 @@ Result: Show a ‘❤’ icon on the LEDs while the logo is pressed. When you re
 
 ---------
 
-### 2.6.9 Microphone (V2 only)
+#### 2.6.9 Microphone (V2 only)
 
 The new micro:bit with sound has a built-in microphone sensor. It can react to loud and quiet sounds, and also measure how loud your environment is. 
 
@@ -779,19 +783,19 @@ Result: After the code is downloaded, You'll notice that the louder the sound ar
 
 --------
 
-# 3. Introduction to the Mini Robot Car
+## 3. Introduction to the Mini Robot Car
 
 Keyestudio Mini Robot Car is a multifunctional car based on BBC micro:bit. It is equipped with a wealth of sensors and peripherals to help you understand how to use the micro:bit and learn more about electronics.
 
 In addition, it leaves lot of universal jacks of building block holes for easy connection to other peripheral devices, you can use your experience and imagination to create more interesting inventions.
 
-## 3.1 Hardware
+### 3.1 Hardware
 
 **Note:** the two colored headlights, two photosensitive sensors, the IR receiver and two motors are already integrated in the car baseplate.
 
 ![](./media/KS4036F-3-5.png)
 
-## 3.2 Parameters
+### 3.2 Parameters
 
 Connector port input: DC 4.5V
 
@@ -815,7 +819,7 @@ The Keyestudio micro:bit mini Robot Car is powered by three AAA batteries. This 
 
 ![](./media/123321.png)
 
-## 3.4 Adding Extension for the Robot Project
+### 3.4 Adding Extension for the Robot Project
 
 We have created a dedicated extension to simplify coding tasks for the mini robot car. 
 
@@ -873,7 +877,7 @@ Click on the refresh icon to update the extension.
 
 ![image-20250421084730590](./media/image-20250421084730590.png)
 
-## 3.5 Assemble the Robot Car
+### 3.5 Assemble the Robot Car
 
 Before assembly, please tear off the protective film on the acrylic boards.
 
@@ -931,7 +935,7 @@ Micro:bit’s LED matrix faces forward
 
 
 
-## 3.6 Robot Project
+### 3.6 Robot Project
 
 **Things to Note Before Starting the Robot Project：**
 
@@ -949,7 +953,7 @@ The LED matrix of the micro:bit facing forward.
 
 ![image-20250421085708011](./media/image-20250421085708011.png)
 
-### 3.6.1 RGB Headlights
+#### 3.6.1 RGB Headlights
 
 ![image-20250421085736888](./media/image-20250421085736888.png)
 
@@ -985,7 +989,7 @@ Or you can right-click on it and choose "Send to→micro:bit.
 
 Working Principle: Micro:bit, as the host, sends instructions to the slave STC8G1K08 through the IIC, then the slave outputs PWM to control RGB LED lights. This greatly savesthe IO ports of the microbit board, for the IIC enables to control two motors and two RGB LED light.
 
-### 3.6.2 Control the Motors
+#### 3.6.2 Control the Motors
 
 The robot car is equipped with two DC geared motors, which are developed on the ordinary DC motors. It enjoys a matching gear reduction box, which provides a lower speed but a larger torque. Furthermore, different reduction ratios of the box can provide different speeds and torques. 
 
@@ -1023,7 +1027,7 @@ Or you can right-click on it and choose "Send to→micro:bit."
 
 **Result:** Disconnect the microbit's USB power supply, put it on the ground and turn on the power slide switch of the robot car, the robot car will go forward for 1s, backward for 1s, turn left for 1s, turn right for 1s and stop for 1s.
 
-### 3.6.3 Photoresistor
+#### 3.6.3 Photoresistor
 
 ![image-20250421093204514](./media/image-20250421093204514.png)
 
@@ -1055,7 +1059,7 @@ Find the downloaded Photoresistor.hex file, drag it in the Makecode to view and 
 
 ![image-20250421093947164](./media/image-20250421093947164.png)
 
-### 3.6.4 Light Following Robot Car
+#### 3.6.4 Light Following Robot Car
 
 In this Step, we are going to guide you to make an Microbit Light Following Robot Car.
 
@@ -1081,7 +1085,7 @@ Or you can right-click on it and choose "Send to→micro:bit."
 
 ![image-20250421094439803](./media/image-20250421094439803.png)
 
-### 3.6.5 The Line Tracking Sensor
+#### 3.6.5 The Line Tracking Sensor
 
 The car base board of Keyestudio micro:bit Mini Robot Car V2.0 contains two line tracking sensor module, and it also integrates two potentiometers on the top to allow you to adjust the sensitivity of the line tracking sensor.
 
@@ -1115,7 +1119,7 @@ Find the downloaded The-Line-Tracking-Sensor.hex file, drag it in the Makecode t
 
 ![image-20250421094901914](./media/image-20250421094901914.png)
 
-### 3.6.6 Line Tracking Robot Car
+#### 3.6.6 Line Tracking Robot Car
 
 Now let's make a line tracking robot. 
 
@@ -1158,7 +1162,7 @@ Avoid performing this experiment in strong sunlight. Sunlight contains a large a
 
 ![image-20250421100213280](./media/image-20250421100213280.png)
 
-### 3.6.7 Ultrasonic Sensor
+#### 3.6.7 Ultrasonic Sensor
 
 ![image-20250421100244106](./media/image-20250421100244106.png)
 
@@ -1218,7 +1222,7 @@ Turn on the POWER Slide switch on the car base Find the downloaded Ultrasonic-Se
 
 ![image-20250421100709112](./media/image-20250421100709112.png)
 
-### 3.6.8 Obstacle Avoidance Robot Car
+#### 3.6.8 Obstacle Avoidance Robot Car
 
 An Obstacle Avoidance Robot is an intelligent robot, which can automatically sense and overcome obstacles on its path. 
 
@@ -1248,7 +1252,7 @@ Or you can right-click on it and choose "Send to→micro:bit.
 
 ![image-20250421101147010](./media/image-20250421101147010.png)
 
-### 3.6.9 Obstacle Following Robot Car
+#### 3.6.9 Obstacle Following Robot Car
 
 Contrary to the previous chapter, we will make an ultrasonic following car in this step. The surface of the obstacle in front should be flat and large enough to return ultrasonic signals to the ultrasonic module.
 
@@ -1276,7 +1280,7 @@ Or you can right-click on it and choose "Send to→micro:bit."
 
 ![image-20250421101439123](./media/image-20250421101439123.png)
 
-### 3.7.0 IR Remote Control
+#### 3.7.0 IR Remote Control
 
 Infrared remote controls are used to control various home appliances such as televisions, stereos, video recorders, and satellite receivers. The infrared remote control is composed of an infrared remote control, an infrared receiver module, and a microcontroller that can decode.
 
@@ -1315,7 +1319,7 @@ micro:bit from inside editor.
 
 ![image-20250421101934297](./media/image-20250421101934297.png)
 
-### 3.7.1 IR Remote Control Robot Car
+#### 3.7.1 IR Remote Control Robot Car
 
 We are going to make an IR Remote Control Robot. The robot car receives the infrared signal and decodes it to obtain specific values from the IR remote control, and the car performs tasks based on the corresponding values.
 
@@ -1345,7 +1349,7 @@ movement of the robot. Press the **OK** button and the robot will stop moving.
 
 ![image-20250421102230951](./media/image-20250421102230951.png)
 
-### 3.7.2 Install Bluetooth APP and Read Bluetooth Data
+#### 3.7.2 Install Bluetooth APP and Read Bluetooth Data
 
 ![image-20250421102257227](./media/image-20250421102257227.png)
 
@@ -1471,7 +1475,7 @@ Click the button on the Bluetooth APP, the **Data View Window** will display its
 
 ![image-20250421104122085](./media/image-20250421104122085.png)
 
-### 3.7.3 Multi-purpose Smart Car
+#### 3.7.3 Multi-purpose Smart Car
 
 In the previous chapter, we learned how to install and use Bluetooth APP.In this step, we will use Bluetooth APP to control the mini robot car
 
