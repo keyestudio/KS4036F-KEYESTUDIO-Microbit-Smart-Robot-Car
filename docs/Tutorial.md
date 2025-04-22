@@ -1,4 +1,4 @@
-# ![KS4036F-2(2)](./media/KS4036F-2(2)-1744943656577-4.png)
+![KS4036F](./media/KS4036F.png)
 
 # Read Me First
 
