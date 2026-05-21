@@ -1,10 +1,9 @@
 
 
-multi-Language
-==============
 
 .. note::
     Documents are available in multiple languages.
+        * |English|
         * |Germany|
         * |Spain|
         * |France|
@@ -13,7 +12,9 @@ multi-Language
         * |Dutch|
     
 
+.. |English| raw:: html
 
+  <a href="https://docs.keyestudio.com/projects/KS4036/en/latest/" target="_blank">English</a>
 
 .. |Germany| raw:: html
 
@@ -49,12 +50,11 @@ multi-Language
    :caption: KS4036F KEYESTUDIO Microbit Smart Robot Car
 
    README.md
-   docs/1.Introduction
-   docs/2.Assemble the Robot Car
-   docs/3.MakecodeTutorial
-   docs/4.MicroPythonTutorial
-
-
+   docs/1.Introduction.md
+   docs/2.Download Code.md
+   docs/3.Assemble the Robot Car.md
+   docs/4.MakecodeTutorial.md
+   docs/5.MicroPythonTutorial.md
 
 
 
